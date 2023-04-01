@@ -10,22 +10,21 @@
     </head>
     <body>
         <div class="container">
-            <h1>{{ $empresa->razao_social }} - {{ $empresa->razao_social}} :</h1>
+            <h1>Razão Social: {{ $empresa->razao_social }} </h1>
 
-            <h3>{{$empresa->cnpj}} - {{ $empresa->cnpj }} :</h3>
+            <h3>CNPJ: {{$empresa->cnpj}} </h3>
 
-            <h3>{{ $empresa->endereco }} :</h3>
+            <h3>Endereço: {{ $empresa->endereco }} </h3>
 
-            <h3>{{ $empresa->contato }} :</h3>
+            <h3>Contato: {{ $empresa->contato }} </h3>
 
-
-            <a class="btn btn-light" href="{{ route('empresas.index') }}">Voltar a lista</a>
+            <a class="btn btn-warning" href="{{ route('empresas.index') }}">Voltar a lista</a>
             <a class="btn btn-warning" href="{{ route('empresas.edit', $empresa->id) }}">Editar</a>
 
             <form method="POST" action="{{ route('empresas.destroy', $empresa->id) }}">
                 @csrf
                 @method('DELETE')
-
+                <br>
                 <input type="submit" value="Excluir Empresa" class="btn btn-danger">
             </form>
         </div>
