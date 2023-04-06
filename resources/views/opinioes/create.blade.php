@@ -25,7 +25,7 @@
         </div>
 
         <div>
-            <label>Sua avaliação: </label>
+            <label>Sua Avaliação: </label>
             <input type="text" name="avaliacao">
         </div>
 

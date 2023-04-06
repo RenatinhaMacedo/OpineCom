@@ -1,29 +1,9 @@
 @extends('main')
 
 @section('content')
+<a href="{{route('usuarios.create')}}">Criar um Usuário</a>
+<a href="{{route('opinioes.create')}}">Fazer uma avalação</a>
+<a href="{{route('usuarios.list')}}">Ver usuários cadastrados</a>
+<a href="{{route('opinioes.index')}}">Lista de opiniões</a>
 
-<div>
-    <table class="table table-hover table-bordered table-primary">
-                <tr class="table-dark">
-                    <th>Nome</th>
-                    <th>CPF</th>
-                    <th>Idade</th>
-                    <th>E-mail</th>
-                </tr>
-
-    @foreach($usuario as $usuario)
-
-                <tr>
-                    <td>{{ $usuario->nome }}</td>
-                    <td>{{ $usuario->documento }}</td>
-                    <td>{{ $usuario->idade }}</td>
-                    <td>{{ $usuario->email }}</td>
-                    <td>
-                        <a class="link" href="{{ route('usuarios.show', $usuario->id) }}"> VER
-                        </a>
-                    </td>
-                </tr>
-            @endforeach
-            </table>
-        </div>
 @endsection

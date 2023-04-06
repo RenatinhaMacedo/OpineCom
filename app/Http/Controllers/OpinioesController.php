@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Models\opiniao;
+use App\Models\Opiniao;
 
 class OpinioesController extends Controller
 {
@@ -13,7 +13,6 @@ class OpinioesController extends Controller
         $Opiniao = Opiniao::all();
         return view('opinioes.index', compact('opinioes'));
     }
-
 
     public function create()
     {
@@ -37,7 +36,7 @@ class OpinioesController extends Controller
 
     public function show(Opiniao $opiniao)
     {
-        return view('opinioes.show', compact('opinioes'));
+        return view('opinioes.show', compact('opiniao', $opiniao->id));
     }
 
 

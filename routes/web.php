@@ -2,8 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmpresasController;
-use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\OpinoesController;
+use App\Http\Controllers\UsuariosController;
+
+
 
 
 Route::get('/', function () {
@@ -20,11 +22,11 @@ Route::put('/empresas/{empresa}', [empresasController::class, 'update'])->name('
 Route::delete('/empresas/{empresa}', [empresasController::class, 'destroy'])->name('empresas.destroy');
 
 //Rotas Usuarios
+Route::get('/usuarios/list', [UsuariosController::class, 'index'])->name('usuarios.index');
 Route::get('/usuarios/novo', [UsuariosController::class, 'create'])->name('usuarios.create');
 Route::get('/usuarios/{usuario}/show', [UsuariosController::class, 'show'])->name('usuarios.show');
 Route::get('/usuarios/{usuario}/editar', [UsuariosController::class, 'edit'])->name('usuarios.edit');
 Route::post('/usuarios/store', [UsuariosController::class, 'store'])->name('usuarios.store');
-Route::get('/usuarios/list', [UsuariosController::class, 'list'])->name('usuarios.list');
 Route::put('/usuarios/{usuario}', [UsuariosController::class, 'update'])->name('usuarios.update');
 Route::get('/usuarios/{usuario}/destroy', [UsuariosController::class, 'destroy'])->name('usuarios.destroy');
 
@@ -33,4 +35,7 @@ Route::get('/opinioes/index', [OpinioesController::class, 'index'])->name('opini
 Route::get('/opinioes/novo', [OpinioesController::class, 'create'])->name('opinioes.create');
 Route::post('/opinioes/store', [OpinioesController::class, 'store'])->name('opinioes.store');
 Route::get('/opinioes/show', [OpinioesController::class, 'show'])->name('opinioes.show');
+Route::get('/opinioes/{opiniao}/editar', [OpinioesController::class, 'edit'])->name('opinioes.edit');
+Route::put('/opinioes/{opiniao}', [OpinioesController::class, 'update'])->name('opnioes.update');
+Route::get('/opinioes/{opiniao}/destroy', [OpinioesController::class, 'destroy'])->name('opinioes.destroy');
 

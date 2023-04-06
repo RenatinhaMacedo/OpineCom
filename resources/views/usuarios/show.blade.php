@@ -9,5 +9,5 @@
 
     <a href="{{route('usuarios.edit', $usuario->id)}}">Editar</a>
     <a href="{{route('usuarios.index')}}">Voltar</a>
-    <a href="{{route('usuario.destroy', $usuario->id)}}">Excluir</a>
+    <a href="{{route('usuarios.destroy', $usuario->id)}}">Excluir</a>
 @endsection

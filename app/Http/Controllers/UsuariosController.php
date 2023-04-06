@@ -9,7 +9,9 @@ class UsuariosController extends Controller
 {
     public function index()
     {
-        return view('usuarios.index');
+        $usuario = Usuario::all();
+        return view('usuarios.index', compact('usuario'));
+
     }
 
     public function create()
@@ -34,8 +36,7 @@ class UsuariosController extends Controller
 
     public function list()
     {
-        $usuario = Usuario::all();
-        return view('usuarios.list', compact('usuario'));
+        return view('usuarios.list');
     }
 
     public function show(Usuario $usuario)
