@@ -11,7 +11,7 @@ class OpinioesController extends Controller
     public function index()
     {
         $Opiniao = Opiniao::all();
-        return view('opinioes.index', compact('opinioes'));
+        return view('opinioes.index', compact('opiniao'));
     }
 
     public function create()
