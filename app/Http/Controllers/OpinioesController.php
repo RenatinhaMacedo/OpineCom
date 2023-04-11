@@ -11,7 +11,7 @@ class OpinioesController extends Controller
     public function index()
     {
         $Opiniao = Opiniao::all();
-        return view('opinioes.index', compact('opinioes'));
+        return view('opinioes.index', compact('opiniao'));
     }
 
     public function create()
@@ -42,7 +42,7 @@ class OpinioesController extends Controller
 
     public function edit(Opiniao $opiniao)
     {
-        return view('opinioes.edit', compact('opinioes'));
+        return view('opinioes.edit', compact('opiniao'));
     }
 
     public function update(Request $requisicao, Opiniao $Opiniao)
