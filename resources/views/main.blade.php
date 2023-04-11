@@ -7,6 +7,14 @@
     <title>OI</title>
     </head>
     <body>
+        <div>
+            <head>
+                <a href="#">Login</a>
+                <a href="#">Cadastrar-se</a>
+                <a href="#">Fazer uma publicação</a>
+                <a href="#">Cadastrar uma empresa</a>
+            </head>
+        </div>
         @yield('content')
     </body>
 </html>

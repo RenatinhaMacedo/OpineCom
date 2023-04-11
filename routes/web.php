@@ -7,9 +7,8 @@ use App\Http\Controllers\UsuariosController;
 
 
 
-
 Route::get('/', function () {
-    return view('#');
+    return view('main');
 });
 
 //Rotas Empresas
@@ -22,6 +21,7 @@ Route::put('/empresas/{empresa}', [empresasController::class, 'update'])->name('
 Route::delete('/empresas/{empresa}', [empresasController::class, 'destroy'])->name('empresas.destroy');
 
 //Rotas Usuarios
+Route::post('/usuarios/login', [UsuariosController::class, 'login'])->name('usuarios.login');
 Route::get('/usuarios/list', [UsuariosController::class, 'index'])->name('usuarios.index');
 Route::get('/usuarios/novo', [UsuariosController::class, 'create'])->name('usuarios.create');
 Route::get('/usuarios/{usuario}/show', [UsuariosController::class, 'show'])->name('usuarios.show');
