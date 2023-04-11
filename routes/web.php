@@ -2,14 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmpresasController;
-use App\Http\Controllers\OpinoesController;
+use App\Http\Controllers\OpinioesController;
 use App\Http\Controllers\UsuariosController;
 
 
 
 
 Route::get('/', function () {
-    return view('main');
+    return view('#');
 });
 
 //Rotas Empresas
@@ -38,4 +38,3 @@ Route::get('/opinioes/show', [OpinioesController::class, 'show'])->name('opinioe
 Route::get('/opinioes/{opiniao}/editar', [OpinioesController::class, 'edit'])->name('opinioes.edit');
 Route::put('/opinioes/{opiniao}', [OpinioesController::class, 'update'])->name('opnioes.update');
 Route::get('/opinioes/{opiniao}/destroy', [OpinioesController::class, 'destroy'])->name('opinioes.destroy');
-

@@ -1,7 +1,7 @@
 @extends('main')
 
 @section('content')
-<form action="{{route('opinioes.store')}}" method="POST">
+<form class="form" action="{{route('opinioes.store')}}" method="POST">
     @csrf
         <div>
             <label>Titulo: </label>
@@ -34,4 +34,5 @@
             <input type="submit" value="Publicar">
         </div>
     </form>
+    <h2>Aqui vai ser o formulário para cadastrar uma opinião</h2>
 @endsection

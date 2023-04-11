@@ -42,6 +42,7 @@ class OpinioesController extends Controller
 
     public function edit(Opiniao $opiniao)
     {
+        $opinioes = Opiniao::all();
         return view('opinioes.edit', compact('opinioes'));
     }
 
