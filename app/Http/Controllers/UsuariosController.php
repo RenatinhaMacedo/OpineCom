@@ -8,17 +8,6 @@ use Illuminate\Support\Facades\Auth;
 
 class UsuariosController extends Controller
 {
-    public function auth(Request $request)
-    {
-        if(auth::attempt('email' => $request-> email, 'senha' => $request-> senha))
-        {
-            dd('logou')
-        }
-        else{
-            dd('Não logou')
-        }
-    }
-
     public function index()
     {
         $usuario = Usuario::all();
