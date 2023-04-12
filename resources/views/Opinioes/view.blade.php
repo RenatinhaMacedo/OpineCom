@@ -10,22 +10,28 @@
     </head>
     <body>
         <div class="container">
-            <h1>{{ $opiniao->titulo }} - {{ $opiniao->titulo }}</h1>
+            <h1>Título: {{ $opiniao->titulo }} </h1>
 
-            <h3>{{ $opiniao->nome }} nome</h3>
-            <h3>{{ $opiniao->nome }} nome</h3>
-            <h3>{{ $opiniao->nome }} nome</h3>
-            <h3>{{ $opiniao->nome }} nome</h3>
+            <h3>Nome: {{ $opiniao->nome }} </h3>
+
+            <h3>Empresa: {{ $opiniao->empresa }} </h3>
+
+            <h3>Produto: {{ $opiniao->produto }} </h3>
+
+            <h3>Avaliação: {{ $opiniao->avaliacao }} </h3>
+
+            <h3>Data: {{ $opiniao->data }}< /h3>
 
 
-            <a class="btn btn-light" href="{{ route('gatos.index') }}">Voltar a lista</a>
-            <a class="btn btn-warning" href="{{ route('gatos.edit', $gato->id) }}">Editar</a>
 
-            <form method="POST" action="{{ route('gatos.destroy', $gato->id) }}">
+            <a class="btn btn-light" href="{{ route('opinioes.index') }}">Voltar a lista</a>
+            <a class="btn btn-warning" href="{{ route('opinioes.edit', $opiniao->id) }}">Editar</a>
+
+            <form method="POST" action="{{ route('opinioes.destroy', $opiniao->id) }}">
                 @csrf
                 @method('DELETE')
 
-                <input type="submit" value="Excluir Gato" class="btn btn-danger">
+                <input type="submit" value="Excluir Opiniao" class="btn btn-danger">
             </form>
         </div>
     </body>

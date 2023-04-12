@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('titulo');
             $table->string('nome');
-            $table->integer('empresa');
+            $table->string('empresa');
             $table->string('produto');
             $table->string('avaliacao');
             $table->date('data');

@@ -16,7 +16,7 @@ class OpinioesController extends Controller
         $opinioes = Opiniao::all();
 
         // Manda os dados para uma view, no caso Opiniaos.index
-        return view('Opinioes.index', compact('Opinioes'));
+        return view('opinioes.index', compact('opinioes'));
     }
 
     /**
@@ -24,7 +24,7 @@ class OpinioesController extends Controller
      */
     public function create()
     {
-        return view('Opinioes.create');
+        return view('opinioes.create');
     }
 
     /**
@@ -47,7 +47,7 @@ class OpinioesController extends Controller
         $opiniao->save();
 
         // Redireciona para a página de detalhes do Opiniao
-        return redirect()->route('Opinioes.show', $opiniao->id);
+        return redirect()->route('opinioes.show', $opiniao->id);
     }
 
     /**
@@ -61,7 +61,7 @@ class OpinioesController extends Controller
     public function show(Opiniao $opiniao)
     {
         // Retorna a view Opiniaos.view com o objeto $Opiniao
-        return view('Opinioes.view', compact('Opiniao'));
+        return view('opinioes.view', compact('opiniao'));
     }
 
     /**
@@ -70,7 +70,7 @@ class OpinioesController extends Controller
     public function edit(Opiniao $opiniao)
     {
         // Retorna a view Opiniaos.edit com o objeto $Opiniao
-        return view('Opinioes.edit', compact('Opiniao'));
+        return view('opinioes.edit', compact('opiniao'));
     }
 
     /**
@@ -82,7 +82,7 @@ class OpinioesController extends Controller
         $opiniao->update($requisicao->all());
 
         // Redireciona para a página de detalhes do Opiniao
-        return redirect()->route('Opinioes.show', $opiniao->id);
+        return redirect()->route('opinioes.show', $opiniao->id);
     }
 
     /**
@@ -92,6 +92,6 @@ class OpinioesController extends Controller
     {
         $opiniao->delete();
 
-        return redirect()->route('Opinioes.index');
+        return redirect()->route('opinioes.index');
     }
 }
