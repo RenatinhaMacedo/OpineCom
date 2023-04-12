@@ -30,3 +30,11 @@ Route::post('/usuarios/store', [UsuariosController::class, 'store'])->name('usua
 Route::put('/usuarios/{usuario}', [UsuariosController::class, 'update'])->name('usuarios.update');
 Route::get('/usuarios/{usuario}/destroy', [UsuariosController::class, 'destroy'])->name('usuarios.destroy');
 
+//Rotas Opiniões
+Route::get('/opinioes', [OpinioesController::class, 'index'])->name('opinioes.index');
+Route::get('/opinioes/novo', [OpinioesController::class, 'create'])->name('opinioes.create');
+Route::get('/opinioes/{opiniao}', [OpinioesController::class, 'show'])->name('opinioes.show');
+Route::get('/opinioes/{opiniao}/editar', [OpinioesController::class, 'edit'])->name('opinioes.edit');
+Route::post('/opinioes', [OpinioesController::class, 'store'])->name('opinioes.store');
+Route::put('/opinioes/{opiniao}', [OpinioesController::class, 'update'])->name('opinioes.update');
+Route::delete('/opinioes/{opiniao}', [OpinioesController::class, 'destroy'])->name('opinioes.destroy');

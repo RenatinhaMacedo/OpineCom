@@ -1,0 +1,97 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Opiniao;
+use Illuminate\Http\Request;
+
+class OpinioesController extends Controller
+{
+    /**
+     * Lista todos os Opiniaos cadastrados
+     */
+    public function index()
+    {
+        // Pega todos os registos da tabela relacionada ao modelo Opiniao
+        $opinioes = Opiniao::all();
+
+        // Manda os dados para uma view, no caso Opiniaos.index
+        return view('Opinioes.index', compact('Opinioes'));
+    }
+
+    /**
+     * Mostra o formulário para criar um novo Opiniao
+     */
+    public function create()
+    {
+        return view('Opinioes.create');
+    }
+
+    /**
+     * Armazena um novo Opiniao
+     */
+    public function store(Request $requisicao)
+    {
+        // Cria um novo objeto do tipo Opiniao em branco
+        $opiniao = new Opiniao();
+
+        // Preenche os campos do objeto com os dados da requisição
+        $opiniao->titulo = $requisicao->titulo;
+        $opiniao->nome = $requisicao->nome;
+        $opiniao->empresa = $requisicao->empresa;
+        $opiniao->produto = $requisicao->produto;
+        $opiniao->avaliacao = $requisicao->avaliacao;
+        $opiniao->data = $requisicao->data;
+
+        // Salva o objeto no banco de dados
+        $opiniao->save();
+
+        // Redireciona para a página de detalhes do Opiniao
+        return redirect()->route('Opinioes.show', $opiniao->id);
+    }
+
+    /**
+     * Mostra um Opiniao específico
+     *
+     * O parametro $Opiniao é um objeto do tipo Opiniao que é passado automaticamente
+     * pelo Laravel, pois o nome do parametro é o mesmo nome do parametro que
+     * está na rota. O Laravel faz a busca no banco de dados e retorna o objeto
+     * que corresponde ao id passado na rota.
+     */
+    public function show(Opiniao $opiniao)
+    {
+        // Retorna a view Opiniaos.view com o objeto $Opiniao
+        return view('Opinioes.view', compact('Opiniao'));
+    }
+
+    /**
+     * Mostra o formulário para editar um Opiniao específico
+     */
+    public function edit(Opiniao $opiniao)
+    {
+        // Retorna a view Opiniaos.edit com o objeto $Opiniao
+        return view('Opinioes.edit', compact('Opiniao'));
+    }
+
+    /**
+     * Atualiza um Opiniao específico
+     */
+    public function update(Request $requisicao, Opiniao $opiniao)
+    {
+        // Atualiza o objeto com os dados da requisição
+        $opiniao->update($requisicao->all());
+
+        // Redireciona para a página de detalhes do Opiniao
+        return redirect()->route('Opinioes.show', $opiniao->id);
+    }
+
+    /**
+     * Remove um Opiniao específico
+     */
+    public function destroy(Opiniao $opiniao)
+    {
+        $opiniao->delete();
+
+        return redirect()->route('Opinioes.index');
+    }
+}
