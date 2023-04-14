@@ -9,7 +9,7 @@
     <body>
         <div>
             <head>
-                <a href="#">Login</a>
+                <a href="{{route('usuarios.login')}}">Login</a>
                 <a href="#">Cadastrar-se</a>
                 <a href="{{route('opinioes.create')}}">Fazer uma publicação</a>
                 <a href="{{route('empresas.create')}}">Cadastrar uma empresa</a>

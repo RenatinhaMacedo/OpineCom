@@ -14,6 +14,12 @@ class UsuariosController extends Controller
         return view('usuarios.index', compact('usuario'));
 
     }
+    public function login()
+    {
+        return view('usuarios.login');
+
+    }
+
 
     public function create()
     {
