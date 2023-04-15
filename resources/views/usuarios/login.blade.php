@@ -46,14 +46,14 @@
     </head>
     <body>
        <div>
-        <form action="{{route('usuarios.login')}}" method="GET">
-        @csrf
-        <h1>Login</h1>
-        <input type="text" placeholder="Email, usuario, ou cnpj">
-        <br><br>
-        <input type="password" placeholder="Senha">
-        <br><br>
-        <button>Enviar</button>
+        <form action="{{ route('login.store') }}" method="POST">
+            @csrf
+            <h1>Login</h1>
+            <input type="text" name="email" placeholder="Email, usuario, ou cnpj">
+            <br><br>
+            <input type="password" name="senha" placeholder="Senha">
+            <br><br>
+            <button>Enviar</button>
         </form>
        </div>
     </body>

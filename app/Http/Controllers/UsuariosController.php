@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Usuario;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UsuariosController extends Controller
 {
@@ -20,7 +21,6 @@ class UsuariosController extends Controller
 
     }
 
-
     public function create()
     {
         return view('usuarios.create');
@@ -34,7 +34,7 @@ class UsuariosController extends Controller
         $usuario->idade = $requisicao->idade;
         $usuario->documento = $requisicao->documento;
         $usuario->email = $requisicao->email;
-        $usuario->senha = $requisicao->senha;
+        $usuario->senha = Hash::make($requisicao->senha);
 
         $usuario->save();
 
