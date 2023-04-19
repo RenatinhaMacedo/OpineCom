@@ -48,11 +48,31 @@
        <div>
         <form action="{{ route('login.store') }}" method="POST">
             @csrf
+
             <h1>Login</h1>
             <input type="text" name="email" placeholder="Email, usuario, ou cnpj">
+
+            @error('email')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
+
             <br><br>
             <input type="password" name="senha" placeholder="Senha">
+
+            @error('senha')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
             <br><br>
+
+            <label for="">Tipo</label>
+            <select name="tipo">
+                <option value="usr">Usuário</option>
+                <option value="emp">Empresa</option>
+            </select>
+            @error('tipo')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
+
             <button>Enviar</button>
         </form>
        </div>

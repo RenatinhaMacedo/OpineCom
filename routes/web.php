@@ -11,13 +11,25 @@ use App\Http\Controllers\{
 
 
 
-Route::get('/', function () {
-    return view('main');
-})->name('home');
-
 //Rotas Empresas
 
+Route::middleware(['web'])->group(function () {
+    Route::get('/entrar', [UsuariosController::class, 'login'])->name('login');
+    Route::post('/entrar', [AutenticacaoController::class, 'login'])->name('login.store');
+
+    Route::get('/usuarios/novo', [UsuariosController::class, 'create'])->name('usuarios.create');
+    Route::post('/usuarios/store', [UsuariosController::class, 'store'])->name('usuarios.store');
+
+    Route::get('/empresas/novo', [EmpresasController::class, 'create'])->name('empresas.create');
+    Route::post('/empresas', [EmpresasController::class, 'store'])->name('empresas.store');
+});
+
 Route::middleware(['auth:usr,emp'])->group(function () {
+
+    Route::get('/', function () {
+        return view('main');
+    })->name('home');
+
     //Rotas Opiniões
     Route::get('/opinioes', [OpinioesController::class, 'index'])->name('opinioes.index');
     Route::get('/opinioes/novo', [OpinioesController::class, 'create'])->name('opinioes.create');
@@ -41,16 +53,8 @@ Route::middleware(['auth:usr,emp'])->group(function () {
 
     Route::put('/usuarios/{usuario}', [UsuariosController::class, 'update'])->name('usuarios.update');
     Route::get('/usuarios/{usuario}/destroy', [UsuariosController::class, 'destroy'])->name('usuarios.destroy');
+
+    // Autenticação
+
+    Route::get('/sair', [AutenticacaoController::class, 'logout'])->name('login.destroy');
 });
-
-Route::middleware(['web'])->group(function () {
-    Route::get('/entrar', [UsuariosController::class, 'login'])->name('login');
-    Route::post('/entrar', [AutenticacaoController::class, 'loginUsuario'])->name('login.store');
-
-    Route::get('/usuarios/novo', [UsuariosController::class, 'create'])->name('usuarios.create');
-    Route::post('/usuarios/store', [UsuariosController::class, 'store'])->name('usuarios.store');
-
-    Route::get('/empresas/novo', [EmpresasController::class, 'create'])->name('empresas.create');
-    Route::post('/empresas', [EmpresasController::class, 'store'])->name('empresas.store');
-});
-
