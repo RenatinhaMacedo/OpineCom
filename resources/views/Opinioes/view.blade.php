@@ -20,7 +20,7 @@
 
             <h3>Avaliação: {{ $opiniao->avaliacao }} </h3>
 
-            <h3>Data: {{ $opiniao->data }}< /h3>
+            <h3>Data: {{ $opiniao->data }} </h3>
 
 
 
