@@ -31,8 +31,8 @@ class UsuariosController extends Controller
         $usuario = new Usuario();
 
         $usuario->nome = $requisicao->nome;
-        $usuario->idade = $requisicao->idade;
         $usuario->documento = $requisicao->documento;
+        $usuario->telefone = $requisicao->telefone;
         $usuario->email = $requisicao->email;
         $usuario->senha = Hash::make($requisicao->senha);
 

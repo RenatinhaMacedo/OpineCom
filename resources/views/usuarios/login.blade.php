@@ -16,7 +16,7 @@
         <section class="area-login">
             <div class="login">
                 <div>
-                    <img src="image/logo.jpg">
+                    <img src="resources/image/logo.jpg">
                 </div>
 
                 <form action="{{ route('login.store') }}" method="POST">
