@@ -12,7 +12,7 @@
         <title>Login</title>
 
     </head>
-    <body>
+    <body class="login-unico">
         <section class="area-login">
             <div class="login">
                 <div>
@@ -46,7 +46,7 @@
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
 
-            <input type="submit" value="entrar">
+            <input type="submit" value="Entrar">
             </div>
         </section>
         </form>

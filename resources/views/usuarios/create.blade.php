@@ -52,8 +52,8 @@
                         </div>
                     </div>
 
-                    <div>
-                        <button class="login-button" type="submit">Cadastrar</button>
+                    <div class="login-button">
+                        <button type="submit">Cadastrar</button>
                     </div>
 
                 </form>
