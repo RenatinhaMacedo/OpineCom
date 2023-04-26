@@ -1,3 +1,12 @@
+//ESTILIZAÇÃO DO LOGIN
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 body{
     background-color: beige;
     font-family: Arial, Helvetica, sans-serif;
@@ -47,9 +56,9 @@ h1 {
 }
 
 .login img{
-    width: 20px;
+    width: 70px;
     height: auto;
-    border-radius: 4px;
+    border-radius: 50px;
 }
 
 .input::placeholder::placeholder{
@@ -58,10 +67,10 @@ h1 {
 }
 
 form [type="submit"]{
+    color: #fff;
     display:block;
     background-color: blueviolet;
     font-size: 20px;
-    text-transform: uppercase;
     font-weight: bold;
     cursor: pointer;
 }
@@ -75,3 +84,5 @@ a{
     text-decoration: none;
     margin-left: 10px;
 }
+
+

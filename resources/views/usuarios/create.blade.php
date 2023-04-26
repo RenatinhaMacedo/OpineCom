@@ -15,7 +15,7 @@
     <body>
         <div class="container">
             <div class="form-image">
-                <img src="assets/img/undraw_shopping_re_hdd9.svg">
+                <img src="{{ asset('/brand/undraw_shopping_re_hdd9.svg') }}">
             </div>
             <div class="form">
                 <form action="{{route('usuarios.store')}}" method="POST">
@@ -53,7 +53,7 @@
                     </div>
 
                     <div>
-                        <button type="submit">Cadastrar</button>
+                        <button class="login-button" type="submit">Cadastrar</button>
                     </div>
 
                 </form>
