@@ -25,6 +25,15 @@
                 </div>
 
                 <div class="mb-3">
+                    <label>E-mail</label>
+                    <input type="email" name="email" class="form-control">
+
+                    @error('email')
+                        {{ $message }}
+                    @enderror
+                </div>
+
+                <div class="mb-3">
                     <label>CNPJ</label>
                     <input type="string" name="cnpj" class="form-control">
 
@@ -41,6 +50,15 @@
                 <div class="mb-3">
                     <label>Contato</label>
                     <input type="text" name="contato" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label>Senha</label>
+                    <input type="password" name="password" class="form-control">
+
+                    @error('senha')
+                        {{ $message }}
+                    @enderror
                 </div>
 
                 <div>

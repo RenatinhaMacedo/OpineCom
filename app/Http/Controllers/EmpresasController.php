@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\empresa;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class EmpresasController extends Controller
 {
@@ -38,9 +39,11 @@ class EmpresasController extends Controller
 
 
         $empresa->razao_social = $requisicao->razao_social;
+        $empresa->email =$requisicao->email;
         $empresa->cnpj = $requisicao->cnpj;
         $empresa->endereco = $requisicao->endereco;
         $empresa->contato = $requisicao->contato;
+        $empresa->senha = Hash::make($requisicao->password);
 
 
         $empresa->save();
