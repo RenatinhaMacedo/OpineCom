@@ -46,9 +46,20 @@
                             <label for="number">Telefone</label>
                             <input id="number" type="tel" name="telefone" placeholder="(xx) xxxx-xxxx" required>
                         </div>
-                        <div class="input-box">
-                            <label for="password">Senha</label>
-                            <input id="password" type="password" name="password" placeholder="digite sua senha" required>
+
+                        <div class="row">
+                            <div class="col">
+                                <div class="input-box">
+                                    <label for="password">Senha</label>
+                                    <input id="password" type="password" name="password" placeholder="digite sua senha" required>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="input-box">
+                                    <label for="password">Confirme a Senha</label>
+                                    <input id="password" type="password" name="password_confirmation" placeholder="digite sua senha" required>
+                                </div>
+                            </div>
                         </div>
                     </div>
 

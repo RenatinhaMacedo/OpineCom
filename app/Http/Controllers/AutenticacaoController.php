@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Usuario;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
 
 class AutenticacaoController extends Controller
@@ -12,11 +14,11 @@ class AutenticacaoController extends Controller
     {
         $request->validate([
             'email' => 'required|email',
-            'senha' => 'required',
+            'password' => 'required',
             'tipo' => 'required|in:emp,usr'
         ]);
 
-        if (!Auth::guard($request->tipo)->attempt(['email' => $request->email, 'password' => $request->senha])) {
+        if (!Auth::guard($request->tipo)->attempt(['email' => $request->email, 'password' => $request->password])) {
             throw ValidationException::withMessages([
                 'email' => __('auth.failed'),
             ]);

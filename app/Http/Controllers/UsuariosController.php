@@ -28,13 +28,17 @@ class UsuariosController extends Controller
 
     public function store(Request $requisicao)
     {
+        $requisicao->validate([
+            'password' => 'required|confirmed'
+        ]);
+
         $usuario = new Usuario();
 
         $usuario->nome = $requisicao->nome;
         $usuario->documento = $requisicao->documento;
         $usuario->telefone = $requisicao->telefone;
         $usuario->email = $requisicao->email;
-        $usuario->senha = Hash::make($requisicao->senha);
+        $usuario->senha = Hash::make($requisicao->password);
 
         $usuario->save();
 
