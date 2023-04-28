@@ -32,16 +32,23 @@
                     <div class="input-group">
                         <div class="input-box">
                             <label for="nome">Nome</label>
-                            <input id="nome" type="text" name="nome" placeholder="nome" required>
+                            <input id="nome" type="text" name="nome" placeholder="nome" value="{{ old('nome') }}" required>
+
+                            @error('nome')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                         </div>
+
                         <div class="input-box">
                             <label for="documento">Documento</label>
                             <input id="documento" type="number" name="documento" placeholder="CPF" required>
                         </div>
+
                         <div class="input-box">
                             <label for="email">Digite seu email</label>
                             <input id="email" type="email" name="email" placeholder="email" required>
                         </div>
+
                         <div class="input-box">
                             <label for="number">Telefone</label>
                             <input id="number" type="tel" name="telefone" placeholder="(xx) xxxx-xxxx" required>
@@ -54,6 +61,7 @@
                                     <input id="password" type="password" name="password" placeholder="digite sua senha" required>
                                 </div>
                             </div>
+
                             <div class="col">
                                 <div class="input-box">
                                     <label for="password">Confirme a Senha</label>
