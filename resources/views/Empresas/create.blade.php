@@ -5,9 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, inicial-scale=1.0">
 
-        @vite([
-            'resources/sass/app.scss'
-        ])
+        @vite(['resources/sass/app.scss' ])
 
         <title>Formulário Cadastro de Empresas</title>
     </head>
@@ -38,13 +36,14 @@
 
                         @error('empresa')
                         <div class="alert alert-danger">{{ $message }}</div>
-                    @enderror
+                        @enderror
 
 
                         <div class="input-box">
                             <label for="razao">Razão Social</label>
                             <input id="razao" type="text" name="razao" placeholder="Razão Social" required>
                         </div>
+
                         <div class="input-box">
                             <label for="email">Digite seu email</label>
                             <input id="email" type="email" name="email" placeholder="Email" required>
@@ -77,52 +76,6 @@
                     <div class="login-button">
                         <button type="submit">Cadastrar</button>
                     </div>
-
                 </form>
-            </div>
-
-                <div class="mb-3">
-                    <label>E-mail</label>
-                    <input type="email" name="email" class="form-control">
-
-                    @error('email')
-                        {{ $message }}
-                    @enderror
-                </div>
-
-                <div class="mb-3">
-                    <label>CNPJ</label>
-                    <input type="string" name="cnpj" class="form-control">
-
-                    @error('cnpj')
-                        {{ $message }}
-                    @enderror
-                </div>
-
-                <div class="mb-3">
-                    <label>Endereço</label>
-                    <input type="text" name="endereco" class="form-control">
-                </div>
-
-                <div class="mb-3">
-                    <label>Contato</label>
-                    <input type="text" name="contato" class="form-control">
-                </div>
-
-                <div class="mb-3">
-                    <label>Senha</label>
-                    <input type="password" name="password" class="form-control">
-
-                    @error('senha')
-                        {{ $message }}
-                    @enderror
-                </div>
-
-                <div>
-                    <input type="submit" value="Salvar Empresa" class="btn btn-primary">
-                </div>
-            </form>
-        </div>
     </body>
-
 </html
