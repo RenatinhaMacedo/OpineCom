@@ -1,55 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, inicial-scale=1.0">
 
-        <title>Cadastro de Opiniões</title>
+        @vite(['resources/sass/app.scss'])
+
+        <title>Deixe sua Opinião!</title>
     </head>
     <body>
-        <div class="container mb-3">
-            <h1>Nova Opinião</h1>
+        <div class="container">
+            <div class="form-image">
+                <img src="{{ asset('/brand/undraw_reviews.svg') }}">
+            </div>
+            <div class="form">
+                <form method="POST" action="{{ route('opinioes.store') }}">
+                    @csrf
+                    <div class="form/header">
+                        <div class="tittle">
+                            <h1>Cadastre sua Opinião</h1><br>
+                        </div>
+                        <div class="login-button">
+                            <button><a href="{{ route('login') }}">Entrar</a></button>
+                        </div>
+                    </div>
 
-            <form method="POST" action="{{ route('opinioes.store') }}">
-                @csrf
+                    <div class="input-group">
+                        <div class="input-box">
+                            <label for="titulo">Título</label>
+                            <input id="titulo" type="text" name="titulo" placeholder="Titulo" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="nome">Nome</label>
+                            <input id="nome" type="text" name="nome" placeholder="Nome" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="empresa">Empresa</label>
+                            <input id="empresa" type="text" name="empresa" placeholder="Empresa" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="produto">Produto/Serviço</label>
+                            <input id="produto" type="text" name="produto" placeholder="Produto/Serviço" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="data">Data</label>
+                            <input id="data" type="date" name="data" placeholder="Data" required>
+                        </div>
 
-                <div class="mb-3">
-                    <label>Titulo</label>
-                    <input type="text" name="titulo" class="form-control">
-                </div>
+                        <div class="input-box">
+                            <label for="avaliacao">Avaliação</label>
+                            <textarea row="6" style="widht: 26em" type="string" id="avaliacao" name="avaliacao" placeholder="Digite sua Opinião"> </textarea>
+                        </div>
+                    </div>
 
-                <div class="mb-3">
-                    <label>Nome</label>
-                    <input type="text" name="nome" class="form-control">
-                </div>
+                    <div class="login-button">
+                        <button type="submit">Cadastrar</button>
+                    </div>
 
-                <div class="mb-3">
-                    <label>Empresa</label>
-                    <input type="text" name="empresa" class="form-control">
-                </div>
-
-                <div class="mb-3">
-                    <label>Produto/Serviço</label>
-                    <input type="text" name="produto" class="form-control">
-
-                </div>
-
-                <div class="mb-3">
-                    <label>Avaliação</label>
-                    <input type="text" name="avaliacao" class="form-control">
-                </div>
-
-                <div class="mb-3">
-                    <label>Data</label>
-                    <input type="date" name="data" class="form-control">
-                </div>
-
-                <div>
-                    <input type="submit" value="Salvar Avaliação" class="btn btn-primary">
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </body>
+
 </html>

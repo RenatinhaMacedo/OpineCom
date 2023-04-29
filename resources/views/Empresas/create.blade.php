@@ -1,52 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, inicial-scale=1.0">
 
-        <title>Cadastro de Empresas</title>
+        @vite([
+            'resources/sass/app.scss'
+        ])
+
+        <title>Formulário Cadastro de Empresas</title>
     </head>
+
     <body>
-        <div class="container mb-3">
-            <h1>Nova Empresa</h1>
+        <div class="container">
+            <div class="form-image">
+                <img src="{{ asset('brand/undraw_forms_re_pkrt.svg') }}">
+            </div>
+            <div class="form">
+                <form action="{{ route('empresas.store') }}" method="POST">
+                    @csrf
 
-            <form method="POST" action="{{ route('empresas.store') }}">
-                @csrf
+                    <div class="form/header">
+                        <div class="tittle">
+                            <h1>Cadastro de Empresa</h1><br>
+                        </div>
+                        <div class="login-button">
+                            <button><a href="{{ route('login') }}">Entrar</a></button>
+                        </div>
+                    </div>
 
-                <div class="mb-3">
-                    <label>Razão Social</label>
-                    <input type="text" name="razao_social" class="form-control">
+                    <div class="input-group">
+                        <div class="input-box">
+                            <label for="empresa">Nova Empresa</label>
+                            <input id="empresa" type="text" name="empresa" placeholder="Nova Empresa" required>
+                        </div>
 
-                    @error('razao_social')
-                        {{ $message }}
+                        @error('empresa')
+                        <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
-                </div>
 
-                <div class="mb-3">
-                    <label>CNPJ</label>
-                    <input type="string" name="cnpj" class="form-control">
+                        <div class="input-box">
+                            <label for="razao">Razão Social</label>
+                            <input id="razao" type="text" name="razao" placeholder="Razão Social" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="email">Digite seu email</label>
+                            <input id="email" type="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="number">CNPJ</label>
+                            <input id="cnpj" type="number" name="cnpj" placeholder=" xx.xxx.xxx/xxxx-xx" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="number">Documento</label>
+                            <input id="documento" type="number" name="documento" placeholder=" xxx.xxx.xxx-xx" required>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="input-box">
+                                    <label for="password">Senha</label>
+                                    <input id="password" type="password" name="password" placeholder="digite sua senha" required>
+                                </div>
+                            </div>
 
-                    @error('cnpj')
-                        {{ $message }}
-                    @enderror
-                </div>
+                            <div class="col">
+                                <div class="input-box">
+                                    <label for="password">Confirme a Senha</label>
+                                    <input id="password" type="password" name="password_confirmation" placeholder="digite sua senha" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="mb-3">
-                    <label>Endereço</label>
-                    <input type="text" name="endereco" class="form-control">
-                </div>
+                    <div class="login-button">
+                        <button type="submit">Cadastrar</button>
+                    </div>
 
-                <div class="mb-3">
-                    <label>Contato</label>
-                    <input type="text" name="contato" class="form-control">
-                </div>
-
-                <div>
-                    <input type="submit" value="Salvar Empresa" class="btn btn-primary">
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </body>
-</html>
+
+</html

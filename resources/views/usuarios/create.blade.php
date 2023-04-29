@@ -25,7 +25,7 @@
                             <h1>Cadastre-se</h1><br>
                         </div>
                         <div class="login-button">
-                            <button><a href="#">Entrar</a></button>
+                            <button><a href="{{ route('login') }}">Entrar</a></button>
                         </div>
                     </div>
 
