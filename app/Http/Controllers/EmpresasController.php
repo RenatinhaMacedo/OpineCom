@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\empresa;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class EmpresasController extends Controller
 {
@@ -34,36 +35,36 @@ class EmpresasController extends Controller
             'cnpj.required'=> "É obrigatório informar o cnpj"
         ]);
 
-        $empresa = new empresa();
+        $empresa = new Empresa();
 
 
         $empresa->razao_social = $requisicao->razao_social;
+        $empresa->email =$requisicao->email;
         $empresa->cnpj = $requisicao->cnpj;
         $empresa->endereco = $requisicao->endereco;
         $empresa->contato = $requisicao->contato;
-
+        $empresa->senha = Hash::make($requisicao->password);
 
         $empresa->save();
-
 
         return redirect()->route('empresas.show', $empresa->id);
     }
 
-    public function show(empresa $empresa)
+    public function show(Empresa $empresa)
     {
 
         return view('empresas.view', compact('empresa'));
     }
 
 
-    public function edit(empresa $empresa)
+    public function edit(Empresa $empresa)
     {
 
         return view('empresas.edit', compact('empresa'));
     }
 
 
-    public function update(Request $requisicao, empresa $empresa)
+    public function update(Request $requisicao, Empresa $empresa)
     {
 
         $empresa->update($requisicao->all());
@@ -73,7 +74,7 @@ class EmpresasController extends Controller
     }
 
 
-    public function destroy(empresa $empresa)
+    public function destroy(Empresa $empresa)
     {
         $empresa->delete();
 

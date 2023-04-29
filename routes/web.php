@@ -6,7 +6,8 @@ use App\Http\Controllers\{
     EmpresasController,
     OpinioesController,
     UsuariosController,
-    AutenticacaoController
+    AutenticacaoController,
+    AdminController
 };
 
 
@@ -26,9 +27,7 @@ Route::middleware(['web'])->group(function () {
 
 Route::middleware(['auth:usr,emp'])->group(function () {
 
-    Route::get('/', function () {
-        return view('main');
-    })->name('home');
+    Route::get('/', [AdminController::class, 'Admin'])->name('Admin.login');
 
     //Rotas Opiniões
     Route::get('/opinioes', [OpinioesController::class, 'index'])->name('opinioes.index');

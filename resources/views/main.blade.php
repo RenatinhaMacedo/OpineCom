@@ -17,6 +17,10 @@
                 <a href="{{ route('login.destroy') }}">Sair</a>
             </head>
         </div>
+
+        @foreach ($opinioes as $opiniao)
+            <p> {{ $opiniao->nome }}</p>
+        @endforeach
         @yield('content')
     </body>
 </html>
