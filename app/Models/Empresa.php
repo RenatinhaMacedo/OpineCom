@@ -22,4 +22,9 @@ class Empresa extends Authenticatable
         'contato',
         'senha'
     ];
+
+    public function getAuthPassword()
+    {
+        return $this->senha;
+    }
 }
