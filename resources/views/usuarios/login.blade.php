@@ -20,7 +20,7 @@
                 <form action="{{ route('login.store') }}" method="POST">
                     @csrf
 
-                    <h1>Login</h1>
+                    <h1 class='log'>Login</h1>
                     <input type="email" name="email" placeholder="Email">
 
                     @error('email')
@@ -35,7 +35,7 @@
                     @enderror
                     <br><br>
 
-                    <label for="">Tipo</label>
+                    <label class="tipo" for="">Tipo:</label>
                     <select name="tipo">
                         <option value="usr">Usuário</option>
                         <option value="emp">Empresa</option>

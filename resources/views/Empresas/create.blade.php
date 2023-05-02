@@ -30,8 +30,8 @@
 
                     <div class="input-group">
                         <div class="input-box">
-                            <label for="empresa">Nova Empresa</label>
-                            <input id="empresa" type="text" name="empresa" placeholder="Nova Empresa" required>
+                            <label for="razao">Razão Social</label>
+                            <input id="razao" type="text" name="razao" placeholder="Razão Social" required>
                         </div>
 
                         @error('empresa')
@@ -40,8 +40,8 @@
 
 
                         <div class="input-box">
-                            <label for="razao">Razão Social</label>
-                            <input id="razao" type="text" name="razao" placeholder="Razão Social" required>
+                            <label for="endereco">Endereço</label>
+                            <input id="endereco" type="text" name="endereco" placeholder="Endereço" required>
                         </div>
 
                         <div class="input-box">
@@ -49,25 +49,25 @@
                             <input id="email" type="email" name="email" placeholder="Email" required>
                         </div>
                         <div class="input-box">
-                            <label for="number">CNPJ</label>
-                            <input id="cnpj" type="number" name="cnpj" placeholder=" xx.xxx.xxx/xxxx-xx" required>
+                            <label for="contato">Contato</label>
+                            <input id="contato" type="number" name="contato" placeholder=" (xx)xxxxx-xxxx" required>
                         </div>
                         <div class="input-box">
-                            <label for="number">Documento</label>
-                            <input id="documento" type="number" name="documento" placeholder=" xxx.xxx.xxx-xx" required>
+                            <label for="number">CNPJ</label>
+                            <input id="cnpj" type="number" name="cnpj" placeholder=" xx.xxx.xxx/xxxx-xx" required>
                         </div>
                         <div class="row">
                             <div class="col">
                                 <div class="input-box">
                                     <label for="password">Senha</label>
-                                    <input id="password" type="password" name="password" placeholder="digite sua senha" required>
+                                    <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
                                 </div>
                             </div>
 
                             <div class="col">
                                 <div class="input-box">
                                     <label for="password">Confirme a Senha</label>
-                                    <input id="password" type="password" name="password_confirmation" placeholder="digite sua senha" required>
+                                    <input id="password" type="password" name="password_confirmation" placeholder="Confirme sua senha" required>
                                 </div>
                             </div>
                         </div>
