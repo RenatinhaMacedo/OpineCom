@@ -46,7 +46,7 @@
 
                         <div class="input-box">
                             <label for="email">Digite seu email</label>
-                            <input id="email" type="email" name="Email" placeholder="Email" required>
+                            <input id="email" type="email" name="email" placeholder="Email" required>
                         </div>
 
                         <div class="input-box">

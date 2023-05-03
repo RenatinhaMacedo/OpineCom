@@ -15,6 +15,7 @@ use App\Http\Controllers\{
 //Rotas Empresas
 
 Route::middleware(['web'])->group(function () {
+    Route::get('/user/home', [AdminController::class, 'home'])->name('home');
     Route::get('/entrar', [UsuariosController::class, 'login'])->name('login');
     Route::post('/entrar', [AutenticacaoController::class, 'login'])->name('login.store');
 
@@ -26,6 +27,7 @@ Route::middleware(['web'])->group(function () {
 });
 
 Route::middleware(['auth:usr,emp'])->group(function () {
+
 
     Route::get('/', [AdminController::class, 'Admin'])->name('Admin.login');
 

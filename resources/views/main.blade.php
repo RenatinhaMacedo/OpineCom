@@ -18,9 +18,7 @@
             </head>
         </div>
 
-        @foreach ($opinioes as $opiniao)
-            <p> {{ $opiniao->nome }}</p>
-        @endforeach
+        
         @yield('content')
     </body>
 </html>
