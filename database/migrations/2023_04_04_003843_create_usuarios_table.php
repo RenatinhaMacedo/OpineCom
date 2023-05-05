@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('email');
             $table->string('telefone');
             $table->string('senha');
+            $table->boolean('administrador')->default(false);
+
             $table->timestamps();
         });
     }

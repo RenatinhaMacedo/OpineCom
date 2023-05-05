@@ -70,6 +70,7 @@ class OpinioesController extends Controller
      */
     public function edit(Opiniao $opiniao)
     {
+        $this->authorize('editar', $opiniao);
         // Retorna a view Opiniaos.edit com o objeto $Opiniao
         return view('opinioes.edit', compact('opiniao'));
     }
@@ -79,6 +80,7 @@ class OpinioesController extends Controller
      */
     public function update(Request $requisicao, Opiniao $opiniao)
     {
+        $this->authorize('editar', $opiniao);
         // Atualiza o objeto com os dados da requisição
         $opiniao->update($requisicao->all());
 

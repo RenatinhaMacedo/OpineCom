@@ -34,4 +34,9 @@ class Usuario extends Authenticatable
     {
         return $this->hasMany(Opiniao::class);
     }
+
+    public function ehAdmin()
+    {
+        return $this->administrador == true;
+    }
 }
