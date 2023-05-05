@@ -31,7 +31,7 @@
             <li><a href="{{route('login')}}" class="links">Login</a></li>
             <li><a href="{{route('empresas.create')}}" class="links">Cadastro de empresa</a></li>
             <li><a href="{{route('usuarios.create')}}" class="links">Cadastro de usuário</a></li>
-            <li><a href="{{route('opinioes.create')}}" class="links">Opinião</a></li>
+            {{-- <li><a href="{{route('opinioes.create')}}" class="links">Opinião</a></li> --}}
             <li><a href="#" class="links">Contato</a></li>
             <li><a href="{{route('login.destroy')}}" class="links">Sair</a></li>
         </ul>

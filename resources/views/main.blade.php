@@ -12,13 +12,13 @@
             <head>
                 <a href="{{route('login')}}">Login</a>
                 <a href="{{route('usuarios.create')}}">Cadastrar-se</a>
-                <a href="{{route('opinioes.create')}}">Fazer uma publicação</a>
+                {{-- <a href="{{route('opinioes.create')}}">Fazer uma publicação</a> --}}
                 <a href="{{route('empresas.create')}}">Cadastrar uma empresa</a>
                 <a href="{{ route('login.destroy') }}">Sair</a>
             </head>
         </div>
 
-        
+
         @yield('content')
     </body>
 </html>

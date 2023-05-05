@@ -12,7 +12,7 @@
         <div class="container">
             <h1>Lista de Opiniões</h1>
 
-            <a class="btn btn-outline-success my-2" href="{{ route('opinioes.create') }}">Nova Opiniao</a>
+            {{-- <a class="btn btn-outline-success my-2" href="{{ route('opinioes.create') }}">Nova Opiniao</a> --}}
 
             <table class="table table-hover table-bordered table-primary">
                 <tr class="table-dark">
