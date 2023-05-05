@@ -40,16 +40,16 @@
     <!-- Main section -->
     <section id="home" class="main-section">
         <div class="info" data-aos="fade-right">
-            <h1 class="h1-main">OpineCom.</h1>            
+            <h1 class="h1-main">OpineCom.</h1>
             <p class="p-main">
-                Com o OpineCom, compartilhar suas opiniões nunca foi tão fácil e intuitivo! 
+                Com o OpineCom, compartilhar suas opiniões nunca foi tão fácil e intuitivo!
                 Não deixe mais suas experiências passarem em branco, experimente o OpineCom agora mesmo e faça sua voz ser ouvida!
             </p>
             <a href="#" class="explore">Começe aqui!</a>
         </div>
-        
+
         <div class="imagem-container">
-            <img class="img-main" src="/Image/main-section/hero-img.svg" alt="">
+            <img class="img-main" src="{{ asset('image/main-section/hero-img.svg') }}" alt="">
         </div>
     </section>
 
@@ -101,7 +101,7 @@
                 </div>
                 <br>
         @endforeach
-    </section>  
+    </section>
 
     <!-- Gatilhos mentais -->
     <section class="gatilhos-section">
@@ -147,7 +147,7 @@
                 <i class="fa-sharp fa-solid fa-circle-arrow-right" style="color: #005eff;" id="arrow-right"></i>
             </div>
         </div>
-    </section>  
+    </section>
 
     <!-- Footer -->
     <footer>
