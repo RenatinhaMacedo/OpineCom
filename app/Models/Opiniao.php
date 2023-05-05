@@ -21,4 +21,10 @@ class Opiniao extends Model
         'avaliacao',
         'data'
     ];
+
+    public function usuario()
+    {
+        // Indica que um Opiniao pertence a um usuário
+        return $this->belongsTo(Usuario::class);
+    }
 }

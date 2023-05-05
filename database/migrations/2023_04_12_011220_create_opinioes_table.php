@@ -14,11 +14,12 @@ return new class extends Migration
         Schema::create('opinioes', function (Blueprint $table) {
             $table->id();
             $table->string('titulo');
-            $table->string('nome');
-            $table->string('empresa');
             $table->string('produto');
             $table->string('avaliacao');
             $table->date('data');
+
+            $table->bigInteger('usuario_id')->unsigned();
+            $table->bigInteger('empresa_id')->unsigned();
 
             $table->timestamps();
         });

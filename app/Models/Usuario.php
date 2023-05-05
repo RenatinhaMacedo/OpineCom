@@ -29,4 +29,9 @@ class Usuario extends Authenticatable
     {
         return $this->senha;
     }
+
+    public function opinioes()
+    {
+        return $this->hasMany(Opiniao::class);
+    }
 }

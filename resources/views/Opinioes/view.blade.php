@@ -12,7 +12,7 @@
         <div class="container">
             <h1>Título: {{ $opiniao->titulo }} </h1>
 
-            <h3>Nome: {{ $opiniao->nome }} </h3>
+            <h3>Nome: {{ $opiniao->usuario->nome }} </h3>
 
             <h3>Empresa: {{ $opiniao->empresa }} </h3>
 
