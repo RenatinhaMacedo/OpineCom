@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Empresa;
 use App\Models\Opiniao;
 use Illuminate\Http\Request;
 
@@ -22,9 +23,9 @@ class OpinioesController extends Controller
     /**
      * Mostra o formulário para criar um novo Opiniao
      */
-    public function create()
+    public function create(Empresa $empresa)
     {
-        return view('opinioes.create');
+        return view('opinioes.create', compact('empresa'));
     }
 
     /**

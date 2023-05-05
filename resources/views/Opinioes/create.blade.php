@@ -37,7 +37,8 @@
                         </div>
                         <div class="input-box">
                             <label for="empresa">Empresa</label>
-                            <input id="empresa" type="text" name="empresa" placeholder="Empresa" required>
+                            <input id="empresa" type="text" value="{{ $empresa->razao_social }}" placeholder="Empresa" required>
+                            <input id="empresa_id" type="hidden" name="empresa_id" value="{{ $empresa->id }}">
                         </div>
                         <div class="input-box">
                             <label for="produto">Produto/Serviço</label>
