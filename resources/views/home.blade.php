@@ -45,7 +45,7 @@
                 Com o OpineCom, compartilhar suas opiniões nunca foi tão fácil e intuitivo!
                 Não deixe mais suas experiências passarem em branco, experimente o OpineCom agora mesmo e faça sua voz ser ouvida!
             </p>
-            <a href="#" class="explore">Começe aqui!</a>
+            <a href="{{route('empresas.index')}}" class="explore">Começe aqui!</a>
         </div>
 
         <div class="imagem-container">

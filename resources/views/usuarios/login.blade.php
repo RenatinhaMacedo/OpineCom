@@ -44,6 +44,8 @@
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
 
+                    <a href="{{route('usuarios.create')}}" class="links">Novo por aqui? Faça seu cadastro!</a>
+                    <a href="{{route('empresas.create')}}" class="links">Empresa, nova por aqui? Faça seu cadastro!</a>
                     <input type="submit" value="Entrar">
             </div>
         </section>

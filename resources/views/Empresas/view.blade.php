@@ -19,7 +19,7 @@
             <h3>Contato: {{ $empresa->contato }} </h3>
 
             <a class="btn btn-warning" href="{{ route('empresas.index') }}">Voltar a lista</a>
-            <a class="btn btn-warning" href="{{ route('empresas.edit', $empresa->id) }}">Editar</a>
+            <a class="btn btn-warning" href="{{ route('opinioes.create', $empresa->id) }}">Fazer opinião</a>
 
             <form method="POST" action="{{ route('empresas.destroy', $empresa->id) }}">
                 @csrf

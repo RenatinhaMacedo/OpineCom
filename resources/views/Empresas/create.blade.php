@@ -31,7 +31,7 @@
                     <div class="input-group">
                         <div class="input-box">
                             <label for="razao">Razão Social</label>
-                            <input id="razao" type="text" name="razao" placeholder="Razão Social" required>
+                            <input id="razao" type="text" name="razao_social" placeholder="Razão Social" required>
                         </div>
 
                         @error('empresa')
@@ -75,6 +75,10 @@
 
                     <div class="login-button">
                         <button type="submit">Cadastrar</button>
+                    </div>
+
+                    <div class="login-button">
+                        <button><a href="{{route('login')}}">Voltar</a></button>
                     </div>
                 </form>
     </body>

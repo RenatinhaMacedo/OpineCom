@@ -27,7 +27,7 @@ class EmpresasController extends Controller
 
     public function store(Request $requisicao)
     {
-        $requisicao->validate([
+         $requisicao->validate([
             'razao_social' => 'required|string',
             'cnpj' => 'required|max_digits:14'
         ],[
@@ -35,21 +35,22 @@ class EmpresasController extends Controller
             'cnpj.required'=> "É obrigatório informar o cnpj"
         ]);
 
+        
         $empresa = new Empresa();
-
-
+        
         $empresa->razao_social = $requisicao->razao_social;
         $empresa->email =$requisicao->email;
         $empresa->cnpj = $requisicao->cnpj;
         $empresa->endereco = $requisicao->endereco;
         $empresa->contato = $requisicao->contato;
         $empresa->senha = Hash::make($requisicao->password);
-
+        
+        
         $empresa->save();
-
+        //return dd($empresa);
         return redirect()->route('empresas.show', $empresa->id);
     }
-
+    
     public function show(Empresa $empresa)
     {
 
@@ -80,4 +81,5 @@ class EmpresasController extends Controller
 
         return redirect()->route('empresas.index');
     }
+
 }
