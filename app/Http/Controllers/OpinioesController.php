@@ -38,9 +38,11 @@ class OpinioesController extends Controller
 
         // Preenche os campos do objeto com os dados da requisição
         $opiniao->titulo = $requisicao->titulo;
+        $opiniao->nome = $requisicao->nome;
         $opiniao->produto = $requisicao->produto;
         $opiniao->avaliacao = $requisicao->avaliacao;
         $opiniao->data = $requisicao->data;
+        $opiniao->empresa_id = $requisicao->usuario_id;
 
         // Associa o usuário com a opnião
         $opiniao->usuario()->associate($requisicao->user());

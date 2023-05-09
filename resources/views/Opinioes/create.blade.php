@@ -51,7 +51,7 @@
 
                         <div class="input-box">
                             <label for="avaliacao">Avaliação</label>
-                            <textarea row="6" style="widht: 26em" type="string" id="avaliacao" name="avaliacao" placeholder="Digite sua Opinião"> </textarea>
+                            <textarea row="6" style="width: 26em" type="string" id="avaliacao" name="avaliacao" placeholder="Digite sua Opinião"> </textarea>
                         </div>
                     </div>
 
