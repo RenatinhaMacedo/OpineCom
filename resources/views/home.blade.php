@@ -110,43 +110,6 @@
             <h2 class="main-title-ranking">Cada avaliação conta uma historia</h2>
             <div class="line-main-title"></div>
         </div>
-        <!-- Gatilho cards -->
-        <div class="gatilhos">
-            <div class="row-gatilhos" data-aos="fade-right">
-                <i class="fa-sharp fa-solid fa-circle-arrow-left" style="color: #005eff;" id="arrow-left"></i>
-                <div class="cards-gatilhos">
-                    <img class="img-slide" src="/Image/historia/dog-gift-review.webp" alt="">
-                    <div class="text-side-right">
-                        <img class="img-text-right" src="/Image/Avaliacao/stars-5.svg" alt="">
-                        <p class="h2-text-right">O primeiro presente de aniversário que a minha mulher não quis devolver.</p>
-
-                        <p class="text-footer-cards">Renata avaliou a <b>Songfinch</b></p>
-
-                    </div>
-                </div>
-
-                <div class="cards-gatilhos">
-                    <img class="img-slide" src="/Image/historia/plant-shopping-review.webp" alt="">
-                    <div class="text-side-right">
-                        <img class="img-text-right" src="/Image/Avaliacao/stars-5.svg" alt="">
-                        <p class="h2-text-right">Mal posso esperar para transformar o meu apartamento numa pequena selva :)</p>
-
-                        <p class="text-footer-cards">JRenatinha avaliou a <b>Patch</b></p>
-                    </div>
-                </div>
-
-                <div class="cards-gatilhos">
-                <img class="img-slide" src="/Image/historia/broken-phone-review.webp" alt="">
-                <div class="text-side-right">
-                    <img class="img-text-right" src="/Image/Avaliacao/stars-5.svg" alt="">
-                    <p class="h2-text-right">Consertaram meu telefone, mas mesmo assim não consigo um date no Tinder.</p>
-
-                    <p class="text-footer-cards">Mesaque avaliou a <b>Re-Tech</b></p>
-                </div>
-                </div>
-                <i class="fa-sharp fa-solid fa-circle-arrow-right" style="color: #005eff;" id="arrow-right"></i>
-            </div>
-        </div>
     </section>
 
     <!-- Footer -->

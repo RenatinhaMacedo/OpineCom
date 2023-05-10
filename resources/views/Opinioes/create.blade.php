@@ -31,10 +31,7 @@
                             <label for="titulo">Título</label>
                             <input id="titulo" type="text" name="titulo" placeholder="Titulo" required>
                         </div>
-                        <div class="input-box">
-                            <label for="nome">Nome</label>
-                            <input id="nome" type="text" name="nome" placeholder="Nome" required>
-                        </div>
+
                         <div class="input-box">
                             <label for="empresa">Empresa</label>
                             <input id="empresa" type="text" value="{{ $empresa->razao_social }}" placeholder="Empresa" required>
