@@ -28,6 +28,7 @@
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
         </label>
         <ul>
+            <li><a href="{{route('opinioes.create')}}" class="links">Opinar!</a></li>
             <li><a href="{{route('login')}}" class="links">Login</a></li>
             <li><a href="{{route('empresas.create')}}" class="links">Cadastro de empresa</a></li>
             <li><a href="{{route('usuarios.create')}}" class="links">Cadastro de usuário</a></li>
@@ -169,12 +170,22 @@
             </div>
         </div>
     </section>
-
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
     <!-- Avaliações -->
     <section class="avaliacoes-section">
         <div class="title-ranking">
-            <h2 class="main-title-ranking">Avaliações recentes</h2>
+            <h2 class="main-title-ranking">Avaliações Postadas</h2>
             <div class="line-main-title"></div>
         </div>
         <!-- Objetivo cards -->
@@ -184,24 +195,20 @@
                 <div class="cards-avaliacoes">
                     <img class="img-people" src="/Image/Avaliacao/people.png" alt="">
                     <h4 class="title-card-avaliacoes">{{$opiniao->nome}}</h4>
-                    <img class="img-cards-avaliacoes" src="/Image/Avaliacao/stars-5.svg" alt="">
-                    <P class="text-card-avaliacoes">{{$opiniao->avaliacao}}</P>
+                    <p class="text-card-avaliacoes">{{$opiniao->titulo}}</p>
+                    <p class="text-card-avaliacoes">{{$opiniao->avaliacao}}</p>
+                    <p class="text-card-avaliacoes">{{$opiniao->data}}</p>
+                    <p class="text-card-avaliacoes">{{$opiniao->empresa}}</p>
                 </div>
                 <br>
         @endforeach
     </section>
-
-    <!-- Gatilhos mentais -->
-    <section class="gatilhos-section">
-        <div class="title-gatilho">
-            <h4 class="subtitle">Suas historias</h4>
-            <h2 class="main-title-ranking">Cada avaliação conta uma historia</h2>
-            <div class="line-main-title"></div>
-        </div>
-    </section>
-
-    
-
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
     <!-- Footer -->
     <footer>
         <div class="logo">

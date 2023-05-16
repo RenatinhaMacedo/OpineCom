@@ -32,10 +32,16 @@
                             <input id="titulo" type="text" name="titulo" placeholder="Titulo" required>
                         </div>
 
+
+                    <div class="input-group">
+                        <div class="input-box">
+                            <label for="titulo">Seu nome</label>
+                            <input id="nome" type="text" name="nome" placeholder="Seu nome" required>
+                        </div>
+
                         <div class="input-box">
                             <label for="empresa">Empresa</label>
-                            <input id="empresa" type="text" value="{{ $empresa->razao_social }}" placeholder="Empresa" required>
-                            <input id="empresa_id" type="hidden" name="empresa_id" value="{{ $empresa->id }}">
+                            <input id="empresa" name="empresa" type="text" placeholder="Empresa" required>
                         </div>
                         <div class="input-box">
                             <label for="produto">Produto/Serviço</label>
