@@ -27,13 +27,13 @@
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
 
-                    <br>
+
                     <input type="password" name="password" placeholder="Senha">
 
                     @error('password')
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
-                    <br><br>
+
 
                     <label class="tipo" for="">Tipo:</label>
                     <select name="tipo">
@@ -44,8 +44,8 @@
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
 
-                    <a href="{{route('usuarios.create')}}" class="links">Novo por aqui? Faça seu cadastro!</a>
-                    <a href="{{route('empresas.create')}}" class="links">Empresa, nova por aqui? Faça seu cadastro!</a>
+                    <a href="{{route('usuarios.create')}}" class="links">Cadastro Usuário.</a>
+                    <a href="{{route('empresas.create')}}" class="links">Cadastro Empresa.</a>
                     <input type="submit" value="Entrar">
             </div>
         </section>

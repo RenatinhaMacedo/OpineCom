@@ -75,9 +75,6 @@
 
                     <div class="login-button">
                         <button type="submit">Cadastrar</button>
-                    </div>
-
-                    <div class="login-button">
                         <button><a href="{{route('login')}}">Voltar</a></button>
                     </div>
                 </form>
