@@ -35,22 +35,22 @@ class EmpresasController extends Controller
             'cnpj.required'=> "É obrigatório informar o cnpj"
         ]);
 
-        
+
         $empresa = new Empresa();
-        
+
         $empresa->razao_social = $requisicao->razao_social;
         $empresa->email =$requisicao->email;
         $empresa->cnpj = $requisicao->cnpj;
         $empresa->endereco = $requisicao->endereco;
         $empresa->contato = $requisicao->contato;
         $empresa->senha = Hash::make($requisicao->password);
-        
-        
+
+
         $empresa->save();
         //return dd($empresa);
         return redirect()->route('empresas.show', $empresa->id);
     }
-    
+
     public function show(Empresa $empresa)
     {
 
@@ -80,6 +80,19 @@ class EmpresasController extends Controller
         $empresa->delete();
 
         return redirect()->route('empresas.index');
+    }
+
+    public function busca(Request $requisicao)
+    {
+        $busca = $requisicao->query('busca');
+
+        $empresas = Empresa::where(function ($query) use ($busca) {
+            $query->where('razao_social', 'LIKE', "%$busca%")
+                ->orWhere('cnpj', 'LIKE', "%$busca%");
+        })
+        ->get();
+
+        return view('empresas.index', compact('empresas'));
     }
 
 }

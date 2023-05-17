@@ -54,6 +54,22 @@
         </div>
     </section>
 
+    <section class="busca_empresa">
+        <div class="title-ranking">
+            <h2 class="main-title-ranking">Buscar empresa</h2>
+            <div class="line-main-title"></div>
+        </div>
+        <!-- Objetivo cards -->
+        <div class="pesquisa">
+            <form action="{{ route('empresas.busca') }}" method="GET">
+                <input type="text" name="busca" class="form-control">
+                <input type="submit" value="Buscar">
+            </form>
+        </div>
+
+        <p>Pesquise as empresas e veja as avaliações</p>
+    </section>
+
     <section class="objetivos">
         <div class="title-ranking">
             <h2 class="main-title-ranking">Principais objetivos</h2>
@@ -97,7 +113,7 @@
             <div class="row-ranking">
                 <div class="ranking-good">
                     <div class="title-header-good">
-                        Melhores empresas que mais resolveram.  
+                        Melhores empresas que mais resolveram.
                     </div>
                     <div class="content">
                         <div class="lojas">
@@ -133,7 +149,7 @@
                 <div class="ranking-bad hide">
                     <div class="ranking-bad">
                         <div class="title-header-bad">
-                            Empresas ruins em resolver problemas.                   
+                            Empresas ruins em resolver problemas.
                         </div>
                         <div class="content">
                             <div class="lojas">
@@ -170,7 +186,7 @@
             </div>
         </div>
     </section>
-    
+
     <br>
     <br>
     <br>
