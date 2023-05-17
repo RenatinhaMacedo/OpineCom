@@ -12,7 +12,7 @@ class EmpresasController extends Controller
     public function index()
     {
 
-        $empresas = Empresa::all();
+        $empresas = Empresa::all()->paginate();
 
 
         return view('empresas.index', compact('empresas'));
@@ -90,7 +90,7 @@ class EmpresasController extends Controller
             $query->where('razao_social', 'LIKE', "%$busca%")
                 ->orWhere('cnpj', 'LIKE', "%$busca%");
         })
-        ->get();
+        ->paginate();
 
         return view('empresas.index', compact('empresas'));
     }
