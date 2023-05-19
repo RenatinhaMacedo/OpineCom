@@ -1,4 +1,4 @@
-@extends('main')
+@extends('template-vazio')
 
 @section('head')
 <head>
@@ -15,9 +15,6 @@
 
 
 @section('content')
-
-
-
     <body>
         <div class="container">
             <div class="form-image">

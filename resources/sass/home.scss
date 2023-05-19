@@ -15,9 +15,9 @@ body {
     width: 100%;
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #0c0ce94d;
+    flex-direction: column;
+
+    // background: #0c0ce94d;
 
 nav {
     background-color: #6b63fff1;
@@ -117,8 +117,8 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 69vh;
     background-color: #6b63fff1;
+    margin-top: 80px;
 }
 
 .info {
@@ -363,7 +363,6 @@ li {
     display: flex;
     flex-direction: column;
     z-index: 0;
-    height: 50vh;
     background-color: #FFFFFF;
 }
 
@@ -429,7 +428,6 @@ li {
     display: flex;
     flex-direction: column;
     z-index: 0;
-    height: 90vh;
     background-color: #fffafa ;
 }
 
@@ -768,7 +766,6 @@ footer {
         align-items: center;
         flex-direction: column;
         padding: 100px 0px 0px 0px;
-        height:  92vh;
         background-color: #fffafa;
     }
 
