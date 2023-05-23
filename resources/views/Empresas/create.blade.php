@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, inicial-scale=1.0">
 
-        @vite(['resources/sass/app.scss' ])
+        @vite(['resources/sass/create.scss' ])
 
         <title>Formulário Cadastro de Empresas</title>
     </head>

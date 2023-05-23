@@ -12,7 +12,7 @@
         <div class="container">
             <h1>Lista de Empresas</h1>
 
-            <button class="btn btn my-2" href="{{ route('empresas.create') }}">Nova Empresa</button>
+            <a class="btn btn my-2" href="{{route('empresas.create')}}">Nova Empresa</a>
 
             <table class="table table table-primary">
                 <tr class="barra">
