@@ -8,7 +8,78 @@ h1{
 
 body {
     background: linear-gradient(to right, rgb(103, 51, 223), rgb(17, 54, 71));
-    color: #fff;
+    color: #000;
     text-align: center;
     font-weight: bold;
+}
+
+.table{
+    background-color: #fff;
+}
+
+.barra{
+    background-color: black;
+    color: #FFF;
+}
+.btn{
+    background-color: violet;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.link{
+    color: red;
+    text-decoration: underline;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #FFF;
+    padding: 3rem;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 1.1rem;
+}
+
+.input-box input {
+    margin: 0.6rem 0;
+    padding: 1rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+}
+
+.input-boxv input:hover {
+    background-color: #eeeeee75;
+}
+
+.input-box input:focus-visible {
+    outline: 1px solid #6c63ff;
+}
+
+.input-box label,
+.gender-title h6 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.input-box input::placeholder {
+    color: #000000be;
 }

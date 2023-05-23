@@ -11,23 +11,79 @@
     </head>
     <body>
         <div class="container">
-            <h1>Razão Social: {{ $empresa->razao_social }} </h1>
+        <table class="table table table-primary">
+            <tr class="barra">
+                <th>Razão Social</th>
+                <th>CNPJ</th>
+                <th>Endereço</th>
+                <th>Contato</th>
+            </tr>
+            <tr>
+                <td>{{ $empresa->razao_social }}</td>
+                <td>{{ $empresa->cnpj }}</td>
+                <td>{{ $empresa->endereco }}</td>
+                <td>{{ $empresa->contato }}</td>
+            </tr>
+        </table>
+                <a class="btn btn-warning" href="{{ route('empresas.index') }}">Voltar a lista</a>
 
-            <h3>CNPJ: {{$empresa->cnpj}} </h3>
+                <div class="form">
+                <form method="POST" action="{{ route('opinioes.store') }}">
+                    @csrf
+                    <div class="form/header">
+                        <div class="tittle">
+                            <h1>Cadastre sua Opinião</h1><br>
+                        </div>
+                        <div class="login-button">
+                            <button><a href="{{ route('login') }}">Entrar</a></button>
+                        </div>
+                    </div>
 
-            <h3>Endereço: {{ $empresa->endereco }} </h3>
+                    <div class="input-group">
+                        <div class="input-box">
+                            <label for="titulo">Título</label>
+                            <input id="titulo" type="text" name="titulo" placeholder="Titulo" required>
+                        </div>
 
-            <h3>Contato: {{ $empresa->contato }} </h3>
 
-            <a class="btn btn-warning" href="{{ route('empresas.index') }}">Voltar a lista</a>
-            <a class="btn btn-warning" href="{{ route('opinioes.create', $empresa->id) }}">Fazer opinião</a>
+                    <div class="input-group">
+                        <div class="input-box">
+                            <label for="titulo">Seu nome</label>
+                            <input id="nome" type="text" name="nome" placeholder="Seu nome" required>
+                        </div>
 
-            <form method="POST" action="{{ route('empresas.destroy', $empresa->id) }}">
-                @csrf
-                @method('DELETE')
-                <br>
-                <input type="submit" value="Excluir Empresa" class="btn btn-danger">
-            </form>
-        </div>
+                        <div class="input-box">
+                            <label for="empresa">Empresa</label>
+                            <input id="empresa" name="empresa" type="text" placeholder="Empresa" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="produto">Produto/Serviço</label>
+                            <input id="produto" type="text" name="produto" placeholder="Produto/Serviço" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="data">Data</label>
+                            <input id="data" type="date" name="data" placeholder="Data" required>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="avaliacao">Avaliação</label>
+                            <textarea row="6" style="width: 26em" type="string" id="avaliacao" name="avaliacao" placeholder="Digite sua Opinião"> </textarea>
+                        </div>
+                    </div>
+
+                    <div class="login-button">
+                        <button type="submit">Cadastrar</button>
+                        <button><a href="{{route('login')}}">Voltar</a></button>
+                    </div>
+
+                </form>
+                
+                <form method="POST" action="{{ route('empresas.destroy', $empresa->id) }}">
+                    @csrf
+                    @method('DELETE')
+                    <br>
+                    <input type="submit" value="Excluir Empresa" class="btn btn-danger">
+                </form>
+            </div>
     </body>
 </html>

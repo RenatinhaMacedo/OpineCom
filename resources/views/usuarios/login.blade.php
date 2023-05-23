@@ -47,10 +47,11 @@
                     <a href="{{route('usuarios.create')}}" class="links">Cadastro Usuário.</a>
                     <a href="{{route('empresas.create')}}" class="links">Cadastro Empresa.</a>
                     <input type="submit" value="Entrar">
-            </div>
-        </section>
+                    <a href="{{route('home')}}" class="links">Voltar</a>
+                </div>
+            </section>
         </form>
-        </div>
+    </div>
     </body>
 
 </html>

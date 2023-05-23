@@ -12,6 +12,7 @@
         <div class="container">
             <h1>Lista de Empresas</h1>
 
+            <a class="btn btn my-2" href="{{route('home')}}">Home</a>
             <a class="btn btn my-2" href="{{route('empresas.create')}}">Nova Empresa</a>
 
             <table class="table table table-primary">
