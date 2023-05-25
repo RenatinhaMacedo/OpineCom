@@ -43,6 +43,17 @@
     padding: 35px;
 }
 
+.voltar{
+    color: blueviolet;
+    text-align: right;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 20px;
+}
+.voltar:hover{
+    color: orangered;
+}
+
 .login form{
     display: flex;
     width: 100%;
@@ -88,4 +99,8 @@ a{
     color: beige;
     text-decoration: none;
     margin-left: 10px;
+}
+
+.links:hover{
+    color: blueviolet;
 }

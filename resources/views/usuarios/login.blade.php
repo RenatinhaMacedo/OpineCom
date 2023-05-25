@@ -44,10 +44,10 @@
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
 
+                    <input type="submit" value="Entrar"><br>
                     <a href="{{route('usuarios.create')}}" class="links">Cadastro Usuário.</a>
                     <a href="{{route('empresas.create')}}" class="links">Cadastro Empresa.</a>
-                    <input type="submit" value="Entrar">
-                    <a href="{{route('home')}}" class="links">Voltar</a>
+                    <a href="{{route('home')}}" class="voltar">Voltar</a>
                 </div>
             </section>
         </form>
