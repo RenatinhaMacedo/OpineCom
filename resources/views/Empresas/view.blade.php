@@ -67,9 +67,14 @@
 
                         <div class="input-box">
                             <label for="avaliacao">Avaliação</label>
-                            <textarea row="6" style="width: 26em" type="string" id="avaliacao" name="avaliacao" placeholder="Digite sua Opinião"> </textarea>
+                            <textarea row="6" style="width: 65em" type="string" id="avaliacao" name="avaliacao" placeholder="Digite sua Opinião"> </textarea>
                         </div>
                     </div>
+
+                    <label class="picture" tabUndex="0">
+                    <input type="file" accept="image/*" class="picture__input" />
+                    <span class="picture__image"></span>
+                    </label>
 
                     <div class="login-button">
                         <button type="submit">Cadastrar</button>
@@ -77,7 +82,7 @@
                     </div>
 
                 </form>
-                
+
                 <form method="POST" action="{{ route('empresas.destroy', $empresa->id) }}">
                     @csrf
                     @method('DELETE')
