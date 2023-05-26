@@ -34,9 +34,6 @@
                         <div class="tittle">
                             <h1>Cadastre sua Opinião</h1><br>
                         </div>
-                        <div class="login-button">
-                            <button><a href="{{ route('login') }}">Entrar</a></button>
-                        </div>
                     </div>
 
                     <div class="input-group">

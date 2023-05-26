@@ -85,95 +85,31 @@
 
     <section class="ranking">
         <div class="title-ranking">
-            <h2 class="main-title-ranking">Ranking das empresas</h2>
+            <h2 class="main-title-ranking">Empresas cadastradas</h2>
             <div class="line-main-title"></div>
         </div>
 
         <div class="button">
             <button id="mostrar-melhores-empresas" class="good">Melhores empresas</button>
-            <button id="mostrar-piores-empresas" class="bad">Piores Empresas</button>
         </div>
         <div class="rankings">
             <div class="row-ranking">
                 <div class="ranking-good">
                     <div class="title-header-good">
-                        Melhores empresas que mais resolveram.
+                        Veja as empresas que já possuem cadastro!
                     </div>
+                    @foreach ($empresas as $empresa)
                     <div class="content">
                         <div class="lojas">
                             <div>
-                                <span>1º</span>
-                                <img class="img-ranking-good" src="/image/ranking/intersolid.png"
-                                    alt="Imagem da loja Intersolid">
-                                <h3>Intersolid</h3>
-                            </div>
-                            <div>
-                                <span>2º</span>
-                                <img class="img-ranking-good" src="/image/ranking/tim.png" alt="Imagem da loja Tim">
-                                <h3>TIM</h3>
-                            </div>
-                            <div>
-                                <span>3º</span>
-                                <img class="img-ranking-good" src="/image/ranking/ifood.png" alt="Imagem Ifood">
-                                <h3>Ifood</h3>
-                            </div>
-                            <div>
-                                <span>4º</span>
-                                <img class="img-ranking-good" src="/image/ranking/magazine.png"
-                                    alt="Imagem da loja magazine">
-                                <h3>Magazine Luiza</h3>
-                            </div>
-                            <div>
-                                <span>5º</span>
-                                <img class="img-ranking-good" src="/image/ranking/bigmart.jpg" alt="Imagem da loja redepas">
-                                <h3> BigMart</h3>
+                                <img class="img-verificado" src="{{ asset('image/verificado.png') }}">
+                                <h3>{{$empresa->razao_social}}</h3>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="ranking-bad hide">
-                    <div class="ranking-bad">
-                        <div class="title-header-bad">
-                            Empresas ruins em resolver problemas.
-                        </div>
-                        <div class="content">
-                            <div class="lojas">
-                                <div>
-                                    <span class="number-bad">1º</span>
-                                    <img class="img-ranking-good" src="/image/ranking/norbi.jpeg"
-                                        alt="Imagem da loja Intersolid">
-                                    <h3>Norbi Calçados</h3>
-                                </div>
-                                <div>
-                                    <span class="number-bad">2º</span>
-                                    <img class="img-ranking-good" src="/image/ranking/americanas.webp"
-                                        alt="Imagem da loja Tim">
-                                    <h3>Americanas</h3>
-                                </div>
-                                <div>
-                                    <span class="number-bad">3º</span>
-                                    <img class="img-ranking-good" src="/image/ranking/barateira.jpg" alt="Imagem Ifood">
-                                    <h3>A barateira</h3>
-                                </div>
-                                <div>
-                                    <span class="number-bad">4º</span>
-                                    <img class="img-ranking-good" src="/image/ranking/sakashita.jfif"
-                                        alt="Imagem da loja magazine">
-                                    <h3>Sakashita</h3>
-                                </div>
-                                <div>
-                                    <span class="number-bad">5º</span>
-                                    <img class="img-ranking-good" src="/image/ranking/redepas.png"
-                                        alt="Imagem da loja redepas">
-                                    <h3> Redepas Jordão</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        @endforeach
             </div>
-        </div>
         </div>
     </section>
 
@@ -200,7 +136,9 @@
                 <div class="row-avaliacoes" data-aos="fade-right">
                     <div class="cards-avaliacoes">
                         <img class="img-people" src="/Image/Avaliacao/people.png" alt="">
+                        <label for="">Nome:</label>
                         <h4 class="title-card-avaliacoes">{{ $opiniao->nome }}</h4>
+                        <label for="">Título:</label>
                         <p class="text-card-avaliacoes">{{ $opiniao->titulo }}</p>
                         <p class="text-card-avaliacoes">{{ $opiniao->avaliacao }}</p>
                         <p class="text-card-avaliacoes">{{ $opiniao->data }}</p>

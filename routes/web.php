@@ -29,7 +29,7 @@ Route::middleware(['web'])->group(function () {
 Route::middleware(['auth:usr,emp'])->group(function () {
 
 
-    Route::get('/', [AdminController::class, 'home'])->name('Admin.login');
+    Route::get('/', [AdminController::class, 'home'])->name('Admin.home');
 
     //Rotas Opiniões
     Route::get('/opinioes', [OpinioesController::class, 'index'])->name('opinioes.index');
