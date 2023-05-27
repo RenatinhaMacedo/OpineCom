@@ -98,17 +98,17 @@
                     <div class="title-header-good">
                         Veja as empresas que já possuem cadastro!
                     </div>
-                    @foreach ($empresas as $empresa)
                     <div class="content">
                         <div class="lojas">
+                            @foreach ($empresas as $empresa)
                             <div>
                                 <img class="img-verificado" src="{{ asset('image/verificado.png') }}">
                                 <h3>{{$empresa->razao_social}}</h3>
                             </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
-        @endforeach
             </div>
         </div>
     </section>
@@ -135,7 +135,6 @@
             <div class="avaliacoes">
                 <div class="row-avaliacoes" data-aos="fade-right">
                     <div class="cards-avaliacoes">
-                        <img class="img-people" src="/Image/Avaliacao/people.png" alt="">
                         <h4 class="title-card-avaliacoes">Nome: {{ $opiniao->nome }}</h4>
                         <p class="text-card-avaliacoes">Título: {{ $opiniao->titulo }}</p>
                         <p class="text-card-avaliacoes">Avaliação: {{ $opiniao->avaliacao }}</p>
