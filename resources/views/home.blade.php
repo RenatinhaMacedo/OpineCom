@@ -136,13 +136,11 @@
                 <div class="row-avaliacoes" data-aos="fade-right">
                     <div class="cards-avaliacoes">
                         <img class="img-people" src="/Image/Avaliacao/people.png" alt="">
-                        <label for="">Nome:</label>
-                        <h4 class="title-card-avaliacoes">{{ $opiniao->nome }}</h4>
-                        <label for="">Título:</label>
-                        <p class="text-card-avaliacoes">{{ $opiniao->titulo }}</p>
-                        <p class="text-card-avaliacoes">{{ $opiniao->avaliacao }}</p>
-                        <p class="text-card-avaliacoes">{{ $opiniao->data }}</p>
-                        <p class="text-card-avaliacoes">{{ $opiniao->empresa }}</p>
+                        <h4 class="title-card-avaliacoes">Nome: {{ $opiniao->nome }}</h4>
+                        <p class="text-card-avaliacoes">Título: {{ $opiniao->titulo }}</p>
+                        <p class="text-card-avaliacoes">Avaliação: {{ $opiniao->avaliacao }}</p>
+                        <p class="text-card-avaliacoes">Data: {{ $opiniao->data }}</p>
+                        <p class="text-card-avaliacoes">Empresa: {{ $opiniao->empresa }}</p>
                     </div>
                     <br>
         @endforeach
