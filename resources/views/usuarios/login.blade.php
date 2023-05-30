@@ -14,13 +14,13 @@
         <section class="area-login">
             <div class="login">
                 <div>
-                    <img src="{{ asset('/brand/logo.jpg') }}">
+                    <h1 class="op">OpineCom</h1>
                 </div>
 
                 <form action="{{ route('login.store') }}" method="POST">
                     @csrf
 
-                    <h1 class='log'>Login</h1>
+                    <h2 class='log'>Login</h2>
                     <input type="email" name="email" placeholder="Email">
 
                     @error('email')
