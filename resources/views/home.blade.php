@@ -84,33 +84,86 @@
     </section>
 
     <section class="ranking">
-        <div class="title-ranking">
-            <h2 class="main-title-ranking">Empresas cadastradas</h2>
-            <div class="line-main-title"></div>
-        </div>
-
-        <div class="button">
+    <div class="button">
             <button id="mostrar-melhores-empresas" class="good">Melhores empresas</button>
+            <button id="mostrar-piores-empresas" class="bad">Piores Empresas</button>
         </div>
         <div class="rankings">
             <div class="row-ranking">
                 <div class="ranking-good">
                     <div class="title-header-good">
-                        Veja as empresas que já possuem cadastro!
+                        Melhores empresas que mais resolveram.  
                     </div>
                     <div class="content">
                         <div class="lojas">
-                            @foreach ($empresas as $empresa)
                             <div>
-                                <img class="img-verificado" src="{{ asset('image/verificado.png') }}">
-                                <h3>{{$empresa->razao_social}}</h3>
+                                <span>1º</span>
+                                <img class="img-ranking-good" src="Image/ranking/intersolid.png" alt="Imagem da loja Intersolid">
+                                <h3>Intersolid</h3>
                             </div>
-                            @endforeach
+                            <div>
+                                <span>2º</span>
+                                <img class="img-ranking-good" src="Image/ranking/tim.png" alt="Imagem da loja Tim">
+                                <h3>TIM</h3>
+                            </div>
+                            <div>
+                                <span>3º</span>
+                                <img class="img-ranking-good" src="Image/ranking/ifood.png" alt="Imagem Ifood">
+                                <h3>Ifood</h3>
+                            </div>
+                            <div>
+                                <span>4º</span>
+                                <img class="img-ranking-good" src="Image/ranking/magazine.png" alt="Imagem da loja magazine">
+                                <h3>Magazine Luiza</h3>
+                            </div>
+                            <div>
+                                <span>5º</span>
+                                <img class="img-ranking-good" src="Image/ranking/bigmart.jpg" alt="Imagem da loja redepas">
+                                <h3> BigMart</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ranking-bad hide">
+                    <div class="ranking-bad">
+                        <div class="title-header-bad">
+                            Empresas ruins em resolver problemas.                   
+                        </div>
+                        <div class="content">
+                            <div class="lojas">
+                                <div>
+                                    <span class="number-bad">1º</span>
+                                    <img class="img-ranking-good" src="Image/ranking/norbi.jpeg" alt="Imagem da loja Intersolid">
+                                    <h3>Norbi Calçados</h3>
+                                </div>
+                                <div>
+                                    <span class="number-bad">2º</span>
+                                    <img class="img-ranking-good" src="Image/ranking/americanas.webp" alt="Imagem da loja Tim">
+                                    <h3>Americanas</h3>
+                                </div>
+                                <div>
+                                    <span class="number-bad">3º</span>
+                                    <img class="img-ranking-good" src="Image/ranking/barateira.jpg" alt="Imagem Ifood">
+                                    <h3>A barateira</h3>
+                                </div>
+                                <div>
+                                    <span class="number-bad">4º</span>
+                                    <img class="img-ranking-good" src="Image/ranking/sakashita.jfif" alt="Imagem da loja magazine">
+                                    <h3>Sakashita</h3>
+                                </div>
+                                <div>
+                                    <span class="number-bad">5º</span>
+                                    <img class="img-ranking-good" src="Image/ranking/redepas.png" alt="Imagem da loja redepas">
+                                    <h3> Redepas Jordão</h3>
+                                </div>
+                            </div>
+                        </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>  
     </section>
 
     <br>

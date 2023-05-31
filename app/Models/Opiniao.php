@@ -19,7 +19,8 @@ class Opiniao extends Model
         'empresa',
         'produto',
         'avaliacao',
-        'data'
+        'data',
+        'imagem'
     ];
 
     public function usuario()

@@ -43,6 +43,20 @@ class OpinioesController extends Controller
         $opiniao->produto = $requisicao->produto;
         $opiniao->avaliacao = $requisicao->avaliacao;
         $opiniao->data = $requisicao->data;
+        $opiniao->imagem = $requisicao->imagem;
+
+        $dados = $requisicao->all();
+
+        $dados['imagem'] = '';
+
+        if($requisicao->hasFile('imagem')){
+            $arquivo = $requisicao->file('imagem')->store('opinioes',['disk' =>'public']);
+
+            if($arquivo){
+                $dados['imagem'] = $arquivo;
+
+            }
+        }
 
         // Associa o usuário com a opnião
        // $opiniao->usuario()->associate($requisicao->user());
@@ -53,6 +67,7 @@ class OpinioesController extends Controller
         // Redireciona para a página de detalhes do Opiniao
         return redirect()->route('home', $opiniao->id);
     }
+
 
     /**
      * Mostra um Opiniao específico
@@ -100,4 +115,6 @@ class OpinioesController extends Controller
 
         return redirect()->route('opinioes.index');
     }
+
+
 }

@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('produto');
             $table->string('avaliacao');
             $table->date('data');
+            $table->string('imagem');
 
             $table->timestamps();
         });
