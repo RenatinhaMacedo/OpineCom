@@ -54,7 +54,7 @@ class EmpresasController extends Controller
     public function show(Empresa $empresa)
     {
 
-        return view('empresas.view', compact('empresa'));
+        return view('empresa', compact('empresa'));
     }
 
 
@@ -93,12 +93,6 @@ class EmpresasController extends Controller
         ->paginate();
 
         return view('empresas.index', compact('empresas'));
-    }
-
-    public function lista()
-    {
-        $empresas=Empresa::all();
-        return view('lista-empresas', compact('empresas'));
     }
 
 }
