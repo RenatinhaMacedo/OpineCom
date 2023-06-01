@@ -92,7 +92,7 @@
             <div class="row-ranking">
                 <div class="ranking-good">
                     <div class="title-header-good">
-                        Melhores empresas que mais resolveram.  
+                        Melhores empresas que mais resolveram.
                     </div>
                     <div class="content">
                         <div class="lojas">
@@ -128,7 +128,7 @@
                 <div class="ranking-bad hide">
                     <div class="ranking-bad">
                         <div class="title-header-bad">
-                            Empresas ruins em resolver problemas.                   
+                            Empresas ruins em resolver problemas.
                         </div>
                         <div class="content">
                             <div class="lojas">
@@ -163,7 +163,7 @@
                     </div>
                 </div>
             </div>
-        </div>  
+        </div>
     </section>
 
     <br>

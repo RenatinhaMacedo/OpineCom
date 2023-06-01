@@ -95,4 +95,10 @@ class EmpresasController extends Controller
         return view('empresas.index', compact('empresas'));
     }
 
+    public function lista()
+    {
+        $empresas=Empresa::all();
+        return view('lista-empresas', compact('empresas'));
+    }
+
 }
