@@ -28,8 +28,9 @@ class AdminController extends Controller
 
     }
 
-    public function empresa()
+    public function empresa(Empresa $empresa)
     {
 
+        return view('empresa', compact('empresa'));
     }
 }

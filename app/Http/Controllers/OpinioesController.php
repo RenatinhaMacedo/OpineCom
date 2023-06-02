@@ -65,7 +65,7 @@ class OpinioesController extends Controller
         $opiniao->save();
 
         // Redireciona para a página de detalhes do Opiniao
-        return redirect()->route('home', $opiniao->id);
+        return redirect()->route('admin.home');
     }
 
 
