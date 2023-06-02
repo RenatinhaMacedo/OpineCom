@@ -25,7 +25,8 @@ class AdminController extends Controller
 
     public function listaEmpresas()
     {
-
+        $empresas = Empresa::all();
+        return view('lista-empresas', compact('empresas'));
     }
 
     public function empresa(Empresa $empresa)
