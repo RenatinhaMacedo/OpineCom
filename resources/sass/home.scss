@@ -850,4 +850,38 @@ footer {
         color: #FFFFFF;
     }
 }
+//ESTILIZAÇÃO LISTA-EMPRESAS
+    h2{
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+    h5{
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        text-shadow: #6f67ff 0.1em 0.0em;
+        font-size: 25px;
+    }
+
+    h5:hover{
+        color: rgb(238, 131, 10);
+    }
+
+    .card{
+        border-color: black;
+        border-radius: 5px 2rem;
+        border-bottom-width: 5px;
+        border-right-width: 5px;
+
+    }
+    .card-body a{
+        font-family: Arial, Helvetica, sans-serif;
+        color: blueviolet;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 25px;
+    }
+    .card-link:hover{
+        color: orange;
+    }
+
 }
