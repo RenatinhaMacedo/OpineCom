@@ -18,39 +18,33 @@
 @endsection
 
 @section('content')
-<br>
-<br>
-<br>
+<div class="container">
     <div>
         <h1 class="display-1">{{$empresa->razao_social}}</h1>
         <h1 class="display-2">{{$empresa->email}}</h1>
         <h1 class="display-3">{{$empresa->contato}}</h1>
         <h1 class="display-4">{{$empresa->endereco}}</h1>
     </div>
-<br>
+    
     <h1 class="display-5">Faça uma opinião!</h1>
     <form action="{{route('opinioes.store')}}" method="PUT">
-        <div>
-            <label for="customRange3" class="form-label">Sua Opinião é NEGATIVA ou POSITIVA?</label>
-            <input type="range" class="form-range" min="4" max="5" step="0.5" id="customRange3">
-            <h2> NEGATIVA  POSITIVA</h2>
-        </div>    
-        <br>
+        <select class="form-select" aria-label="Default select example">
+            <option selected>Sua avaliação é POSITIVA ou NEGATIVA?</option>
+            <option value="1">:-) / Positiva</option>
+            <option value="2">:-( / Negativa</option>
+        </select>    
         <div>
             <label>Título:</label>
             <input class="form-control form-control-lg" type="text" name="titulo" placeholder="Dê um título para a sua Opinião" aria-label=".form-control-lg example">
         </div>
-        <br>
         <div>
             <label>Produto ou serviço:</label>
             <input class="form-control form-control-lg" type="text" placeholder="Qual foi o produto ou serviço?" aria-label=".form-control-lg example">
         </div>
-        <br>
         <div>
             <label>Data:</label>
             <input class="form-control form-control-lg" type="date" aria-label=".form-control-lg example">
         </div>
-        <br>
         <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Escreva a sua opinião:</label>
             <textarea class="form-control" name="avaliacao" id="exampleFormControlTextarea1" rows="3"></textarea>
@@ -64,4 +58,5 @@
             <button type="submit" class="btn btn-primary">Opinar</button>
         </div>
     </form>
+</div>
 @endsection

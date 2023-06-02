@@ -42,7 +42,7 @@
                             <h6 class="card-email my-1">Email: {{$empresa->email}}</h6>
                             <h6 class="card-text my-1">Endereço: {{$empresa->endereco}}</h6>
                             <h6 class="card-contato my-2">Contato: {{$empresa->contato}}</h6>
-                            <a href="#" class="card-link">Ver</a>
+                            <a href="{{route('empresas.show', $empresa->id)}}" class="card-link">Ver</a>
                         </div>
                     </div>
 
