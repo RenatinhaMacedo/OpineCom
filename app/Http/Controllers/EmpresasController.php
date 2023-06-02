@@ -92,7 +92,7 @@ class EmpresasController extends Controller
         })
         ->paginate();
 
-        return view('empresas.index', compact('empresas'));
+        return view('lista-empresas', compact('empresas'));
     }
 
 }
