@@ -44,6 +44,7 @@ class OpinioesController extends Controller
         $opiniao->avaliacao = $requisicao->avaliacao;
         $opiniao->data = $requisicao->data;
         $opiniao->imagem = $requisicao->imagem;
+        $opiniao->empresa_id = $requisicao->empresa_id;
 
         $dados = $requisicao->all();
 

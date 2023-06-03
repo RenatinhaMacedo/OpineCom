@@ -45,13 +45,11 @@ class Empresa extends Authenticatable
 
     public function getTotalOpnioesPositivasAttribute()
     {
-        return 30;
-        // return $this->opnioes_positivas->count();
+        return $this->opnioes_positivas->count();
     }
 
     public function getTotalOpnioesNegativasAttribute()
     {
-        return 10;
-        // return $this->opnioes_negativas->count();
+        return $this->opnioes_negativas->count();
     }
 }

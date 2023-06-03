@@ -19,7 +19,8 @@ return new class extends Migration
             $table->string('produto');
             $table->string('avaliacao');
             $table->date('data');
-            $table->string('imagem');
+            $table->string('imagem')->nullable();
+            $table->bigInteger('empresa_id');
 
             $table->timestamps();
         });
