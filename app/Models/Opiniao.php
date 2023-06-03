@@ -14,9 +14,9 @@ class Opiniao extends Model
 
     // Indica os campos que podem ser preenchidos pelo usuário
     protected $fillable = [
+        'tipo',
         'titulo',
-        'nome',
-        'empresa',
+        'usuario_id',   
         'produto',
         'avaliacao',
         'data',

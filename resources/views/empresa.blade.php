@@ -27,8 +27,9 @@
     </div>
     
     <h1 class="display-5">Faça uma opinião!</h1>
-    <form action="{{route('opinioes.store')}}" method="PUT">
-        <select class="form-select" aria-label="Default select example">
+    <form action="{{route('opinioes.store')}}" method="POST">
+    @csrf
+        <select class="form-select" aria-label="Default select example" name="tipo">
             <option selected>Sua avaliação é POSITIVA ou NEGATIVA?</option>
             <option value="1">:-) / Positiva</option>
             <option value="2">:-( / Negativa</option>
@@ -39,11 +40,11 @@
         </div>
         <div>
             <label>Produto ou serviço:</label>
-            <input class="form-control form-control-lg" type="text" placeholder="Qual foi o produto ou serviço?" aria-label=".form-control-lg example">
+            <input class="form-control form-control-lg" type="text" name="produto" placeholder="Qual foi o produto ou serviço?" aria-label=".form-control-lg example">
         </div>
         <div>
             <label>Data:</label>
-            <input class="form-control form-control-lg" type="date" aria-label=".form-control-lg example">
+            <input class="form-control form-control-lg" type="date" name="data" aria-label=".form-control-lg example">
         </div>
         <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Escreva a sua opinião:</label>
@@ -52,7 +53,7 @@
         <br>
         <div class="mb-3">
             <label for="formFile" class="form-label">Foto:</label>
-            <input class="form-control" type="file" id="formFile">
+            <input class="form-control" type="file" name="imagem" id="formFile">
         </div>
         <div>
             <button type="submit" class="btn btn-primary">Opinar</button>

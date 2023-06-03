@@ -37,9 +37,9 @@ class OpinioesController extends Controller
         $opiniao = new Opiniao();
 
         // Preenche os campos do objeto com os dados da requisição
+        $opiniao->tipo = $requisicao->tipo;
         $opiniao->titulo = $requisicao->titulo;
-        $opiniao->nome = $requisicao->nome;
-        $opiniao->empresa = $requisicao->empresa;
+        $opiniao->usuario_id = $requisicao->usuario_id;
         $opiniao->produto = $requisicao->produto;
         $opiniao->avaliacao = $requisicao->avaliacao;
         $opiniao->data = $requisicao->data;
@@ -59,13 +59,12 @@ class OpinioesController extends Controller
         }
 
         // Associa o usuário com a opnião
-       // $opiniao->usuario()->associate($requisicao->user());
-
+        $opiniao->usuario()->associate($requisicao->user());
         // Salva o objeto no banco de dados
         $opiniao->save();
 
         // Redireciona para a página de detalhes do Opiniao
-        return redirect()->route('admin.home');
+        return redirect()->route('home');
     }
 
 
