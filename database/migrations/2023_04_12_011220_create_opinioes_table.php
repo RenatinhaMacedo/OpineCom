@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('opinioes', function (Blueprint $table) {
             $table->id();
+            $table->integer('tipo');
             $table->string('titulo');
-            $table->string('nome');
-            $table->string('empresa');
+            $table->string('usuario_id');
             $table->string('produto');
             $table->string('avaliacao');
             $table->date('data');
