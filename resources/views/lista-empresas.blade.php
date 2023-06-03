@@ -37,12 +37,12 @@
                 <div class="col-12 col-sm-12 col-md-6 col-lg-3">
                     <div class="card" style="width: 18rem;">
                         <div class="card-body">
-                            <h5 class="card-title my-3">Razão Social: {{$empresa->razao_social}}</h5>
+                            <h5 class="card-title my-3"> {{$empresa->razao_social}}</h5>
                             <h6 class="card-subtitle my-1">CNPJ: {{$empresa->cnpj}}</h6>
                             <h6 class="card-email my-1">Email: {{$empresa->email}}</h6>
                             <h6 class="card-text my-1">Endereço: {{$empresa->endereco}}</h6>
                             <h6 class="card-contato my-2">Contato: {{$empresa->contato}}</h6>
-                            <a href="{{route('empresas.show', $empresa->id)}}" class="card-link">Ver</a>
+                            <a class="ver" href="{{route('empresas.show', $empresa->id)}}" class="card-link">Ver</a>
                         </div>
                     </div>
 
