@@ -27,4 +27,31 @@ class Empresa extends Authenticatable
     {
         return $this->senha;
     }
+
+    public function opnioes()
+    {
+        return $this->hasMany(Opiniao::class, 'empresa_id');
+    }
+
+    public function opnioes_negativas()
+    {
+        return $this->opnioes()->where('tipo', '2');
+    }
+
+    public function opnioes_positivas()
+    {
+        return $this->opnioes()->where('tipo', '1');
+    }
+
+    public function getTotalOpnioesPositivasAttribute()
+    {
+        return 30;
+        // return $this->opnioes_positivas->count();
+    }
+
+    public function getTotalOpnioesNegativasAttribute()
+    {
+        return 10;
+        // return $this->opnioes_negativas->count();
+    }
 }

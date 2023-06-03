@@ -37,12 +37,25 @@
                 <div class="col-12 col-sm-12 col-md-6 col-lg-3">
                     <div class="card" style="width: 18rem;">
                         <div class="card-body">
-                            <h5 class="card-title my-3">Razão Social: {{$empresa->razao_social}}</h5>
+                            <h5 class="card-title my-3"> {{$empresa->razao_social}}</h5>
                             <h6 class="card-subtitle my-1">CNPJ: {{$empresa->cnpj}}</h6>
                             <h6 class="card-email my-1">Email: {{$empresa->email}}</h6>
                             <h6 class="card-text my-1">Endereço: {{$empresa->endereco}}</h6>
                             <h6 class="card-contato my-2">Contato: {{$empresa->contato}}</h6>
-                            <a href="{{route('empresas.show', $empresa->id)}}" class="card-link">Ver</a>
+
+                            <div class="d-flex flex-row justify-content-around align-items-center my-3">
+                                <div class="d-flex flex-column align-items-center border rounded shadow p-2">
+                                    <p class="mb-0 fs-4 mx-1">{{ $empresa->total_opnioes_positivas }}</p>
+                                    <img width="50px" src="/image/like.png" alt="">
+                                </div>
+
+                                <div class="d-flex flex-column align-items-center border rounded shadow p-2">
+                                    <p class="mb-0 fs-4 mx-1">{{ $empresa->total_opnioes_negativas }}</p>
+                                    <img width="50px" src="/image/dislike.png" alt="">
+                                </div>
+                            </div>
+
+                            <a class="ver" href="{{route('empresas.show', $empresa->id)}}" class="card-link">Ver</a>
                         </div>
                     </div>
 
