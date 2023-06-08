@@ -5,7 +5,7 @@
     <!-- Navbar -->
     <nav>
         <div class="logo">
-            <a class="main-text" href="#home">
+            <a class="main-text" href="{{route('home')}}">
                 <h1 class="img-logo">OpineCom.</h1>
             </a>
         </div>
@@ -18,14 +18,14 @@
             @guest
                 <li><a href="{{route('empresas.create')}}" class="links">Cadastro de empresa</a></li>
                <li><a href="{{route('usuarios.create')}}" class="links">Cadastro de usuário</a></li>
-            @endguest    
+            @endguest
            {{-- <li><a href="{{route('opinioes.create')}}" class="links">Opinião</a></li> --}}
             @auth
                 <li><a href="{{route('login.destroy')}}" class="links">Sair</a></li>
             @endauth
             @guest
-                <li><a href="{{route('login')}}" class="links">Login</a></li>  
-            @endguest    
+                <li><a href="{{route('login')}}" class="links">Login</a></li>
+            @endguest
         </ul>
     </nav>
         @yield('content')

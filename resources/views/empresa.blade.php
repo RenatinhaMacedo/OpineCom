@@ -34,8 +34,8 @@
 
             <select class="form-select" aria-label="Default select example" name="tipo">
                 <option selected>Sua avaliação é POSITIVA ou NEGATIVA?</option>
-                <option value="1">:-) / Positiva</option>
-                <option value="2">:-( / Negativa</option>
+                <option value="1">👍 Positiva</option>
+                <option value="2">👎 Negativa</option>
             </select>
             <div>
                 <label>Título:</label>
