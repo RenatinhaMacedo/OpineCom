@@ -15,7 +15,7 @@
                 <img src="{{ asset('/brand/undraw_reviews.svg') }}">
             </div>
             <div class="form">
-                <form method="POST" action="{{ route('opinioes.store') }}">
+                <form method="POST" action="{{ route('opinioes.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form/header">
                         <div class="tittle">
@@ -57,7 +57,10 @@
                             <textarea row="6" style="width: 26em" type="string" id="avaliacao" name="avaliacao" placeholder="Digite sua Opinião"> </textarea>
                         </div>
                     </div>
-
+                        <div class="mb-3">
+                            <label for="">Foto</label>
+                            <input type="file" name="imagem" class="form-control">
+                        </div>
                     <div class="login-button">
                         <button type="submit">Cadastrar</button>
                         <button><a href="{{route('login')}}">Voltar</a></button>

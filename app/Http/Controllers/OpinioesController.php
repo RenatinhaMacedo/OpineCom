@@ -48,15 +48,11 @@ class OpinioesController extends Controller
 
         $dados = $requisicao->all();
 
-        $dados['imagem'] = '';
+        $opiniao->imagem = '';
 
         if($requisicao->hasFile('imagem')){
-            $arquivo = $requisicao->file('imagem')->store('opinioes',['disk' =>'public']);
-
-            if($arquivo){
-                $dados['imagem'] = $arquivo;
-
-            }
+            $arquivo = $requisicao->file('imagem')->store('opinioes', ['disk' => 'public']);
+            $opiniao->imagem = $arquivo;
         }
 
         // Associa o usuário com a opnião
@@ -100,6 +96,13 @@ class OpinioesController extends Controller
     {
         $this->authorize('editar', $opiniao);
         // Atualiza o objeto com os dados da requisição
+
+        $opiniao->imagem = '';
+
+        if($requisicao->hasFile('imagem')){
+            $arquivo = $requisicao->file('imagem')->store('opinioes', ['disk' => 'public']);
+            $opiniao->imagem = $arquivo;
+        }
         $opiniao->update($requisicao->all());
 
         // Redireciona para a página de detalhes do Opiniao

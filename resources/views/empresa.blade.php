@@ -35,7 +35,7 @@
 
 
         <h1 class="display-5">Faça uma opinião!</h1>
-        <form action="{{route('opinioes.store')}}" method="POST">
+        <form action="{{route('opinioes.store')}}" method="POST" enctype="multipart/form-data">
             @csrf
             <input type="hidden" name="empresa_id" value="{{ $empresa->id }}">
 
