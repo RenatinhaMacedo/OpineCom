@@ -45,9 +45,15 @@ class EmpresasController extends Controller
         $empresa->contato = $requisicao->contato;
         $empresa->senha = Hash::make($requisicao->password);
 
+        $empresa->imagem = '';
+
+        if($requisicao->hasFile('imagem')){
+            $arquivo = $requisicao->file('imagem')->store('empresas', ['disk' => 'public']);
+            $empresa->imagem = $arquivo;
+        }
 
         $empresa->save();
-        //return dd($empresa);
+
         return redirect()->route('empresas.show', $empresa->id);
     }
 

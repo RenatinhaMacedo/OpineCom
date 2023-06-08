@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('endereco');
             $table->string('contato');
             $table->string('senha');
+            $table->string('imagem')->nullable();
 
             $table->timestamps();
         });

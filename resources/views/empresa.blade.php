@@ -20,12 +20,19 @@
 @section('content')
 <section class="my-5 pt-5">
     <div class="container">
-        <div>
-            <h1 class="display-1">{{$empresa->razao_social}}</h1>
-            <h1 class="display-2">{{$empresa->email}}</h1>
-            <h1 class="display-3">{{$empresa->contato}}</h1>
-            <h1 class="display-4">{{$empresa->endereco}}</h1>
+        <div class="d-flex gap-5 flex-row justify-content-between">
+            <div>
+                <img src="/storage/{{ $empresa->imagem }}" class="img-fluid">
+            </div>
+
+            <div>
+                <h1 class="display-1">{{$empresa->razao_social}}</h1>
+                <h1 class="display-2">{{$empresa->email}}</h1>
+                <h1 class="display-3">{{$empresa->contato}}</h1>
+                <h1 class="display-4">{{$empresa->endereco}}</h1>
+            </div>
         </div>
+
 
         <h1 class="display-5">Faça uma opinião!</h1>
         <form action="{{route('opinioes.store')}}" method="POST">

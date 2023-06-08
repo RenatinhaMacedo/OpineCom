@@ -16,7 +16,7 @@
                 <img src="{{ asset('brand/undraw_forms_re_pkrt.svg') }}">
             </div>
             <div class="form">
-                <form action="{{ route('empresas.store') }}" method="POST">
+                <form action="{{ route('empresas.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
 
                     <div class="form/header">
@@ -70,6 +70,11 @@
                                     <input id="password" type="password" name="password_confirmation" placeholder="Confirme sua senha" required>
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="">Foto</label>
+                            <input type="file" name="imagem" class="form-control">
                         </div>
                     </div>
 
