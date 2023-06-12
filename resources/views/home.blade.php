@@ -27,7 +27,7 @@
                 Não deixe mais suas experiências passarem em branco, experimente o OpineCom agora mesmo e faça sua voz ser
                 ouvida!
             </p>
-            <a href="{{ route('empresas.index') }}" class="explore">Começe aqui!</a>
+            <a href="{{ route('lista.empresas') }}" class="explore">Começe aqui!</a>
         </div>
 
         <div class="imagem-container">
