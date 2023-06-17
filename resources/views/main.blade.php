@@ -1,3 +1,14 @@
+@php
+    $guards = config('auth.guards');
+
+    foreach ($guards as $guardName => $guardConfig) {
+        if (Auth::guard($guardName)->check()) {
+            $user = Auth::guard($guardName)->user();
+            break;
+        }
+    }
+@endphp
+
 <!DOCTYPE html>
 <html lang="pt-br">
     @yield('head')
@@ -15,26 +26,27 @@
         </label>
         <ul>
             <li><a href="{{route('lista.empresas')}}" class="links">Opinar!</a></li>
-            @guest
+            @if(!isset($user))
                 <li><a href="{{route('empresas.create')}}" class="links">Cadastro de empresa</a></li>
                <li><a href="{{route('usuarios.create')}}" class="links">Cadastro de usuário</a></li>
-            @endguest
+            @endif
            {{-- <li><a href="{{route('opinioes.create')}}" class="links">Opinião</a></li> --}}
-            @auth('emp')
-                @dd(auth()->user())
-                @if(auth()->user()->tipo_usuario == 'empresa')
-                    <li><a href="{{route('empresas.edit', auth()->user()->id)}}" class="links">Meus dados</a></li>
-                @endif
 
-                @if(auth()->user()->tipo_usuario == 'usuario')
-                    <li><a href="{{route('usuarios.edit', auth()->user()->id)}}" class="links">Meus dados</a></li>
-                @endif
-                
+
+
+            @auth('usr')
+                <li><a href="{{route('empresas.edit', $user->id)}}" class="links">Meus dados</a></li>
                 <li><a href="{{route('login.destroy')}}" class="links">Sair</a></li>
             @endauth
-            @guest
+
+            @auth('emp')
+                <li><a href="{{route('usuarios.edit', $user->id)}}" class="links">Meus dados</a></li>
+                <li><a href="{{route('login.destroy')}}" class="links">Sair</a></li>
+            @endauth
+
+            @if(!isset($user))
                 <li><a href="{{route('login')}}" class="links">Login</a></li>
-            @endguest
+            @endif
         </ul>
     </nav>
         @yield('content')
