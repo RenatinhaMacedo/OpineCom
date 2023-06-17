@@ -35,6 +35,19 @@
         <div class="mt-2 mb-5">
             <h1>Avaliações da {{$empresa->razao_social}}</h1>            
         </div>
+        @foreach ($opinioes->$empresa as $opiniao)
+            <div class="avaliacoes">
+                <div class="row-avaliacoes" data-aos="fade-right">
+                    <div class="cards-avaliacoes">
+                    <img src="/storage/{{ $opiniao->imagem }}" class="img-fluid">
+                        <h4 class="title-card-avaliacoes my-5">Nome: {{ $opiniao->usuario->nome }}</h4>
+                        <p class="text-card-avaliacoes">Título: {{ $opiniao->titulo }}</p>
+                        <p class="text-card-avaliacoes">Avaliação: {{ $opiniao->avaliacao }}</p>
+                        <p class="text-card-avaliacoes">Data: {{ $opiniao->data }}</p>
+                        <p class="text-card-avaliacoes">Empresa:{{ $opiniao->empresa->razao_social }}</p>
+                    </div>
+                </div>
+            </div>
 
         <h1 class="display-5">Faça uma opinião!</h1>
         <form action="{{route('opinioes.store')}}" method="POST" enctype="multipart/form-data">
