@@ -16,7 +16,7 @@ class Opiniao extends Model
     protected $fillable = [
         'tipo',
         'titulo',
-        'usuario_id',   
+        'usuario_id',
         'produto',
         'avaliacao',
         'data',
@@ -27,5 +27,11 @@ class Opiniao extends Model
     {
         // Indica que um Opiniao pertence a um usuário
         return $this->belongsTo(Usuario::class);
+    }
+
+    public function empresa()
+    {
+        // Indica que um Opiniao pertence a uma empresa
+        return $this->belongsTo(Empresa::class);
     }
 }

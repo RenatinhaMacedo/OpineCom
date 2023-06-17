@@ -193,7 +193,7 @@
                         <p class="text-card-avaliacoes">Título: {{ $opiniao->titulo }}</p>
                         <p class="text-card-avaliacoes">Avaliação: {{ $opiniao->avaliacao }}</p>
                         <p class="text-card-avaliacoes">Data: {{ $opiniao->data }}</p>
-                        <p class="text-card-avaliacoes">Empresa:{{ $opiniao->empresa_id }}</p>
+                        <p class="text-card-avaliacoes">Empresa:{{ $opiniao->empresa->razao_social }}</p>
                     </div>
                     <br>
         @endforeach
