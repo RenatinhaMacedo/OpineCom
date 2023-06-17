@@ -52,4 +52,9 @@ class Empresa extends Authenticatable
     {
         return $this->opnioes_negativas->count();
     }
+
+    public function getTipoUsuarioAttribute()
+    {
+        return 'empresa';
+    }
 }

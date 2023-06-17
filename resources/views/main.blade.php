@@ -20,7 +20,16 @@
                <li><a href="{{route('usuarios.create')}}" class="links">Cadastro de usuário</a></li>
             @endguest
            {{-- <li><a href="{{route('opinioes.create')}}" class="links">Opinião</a></li> --}}
-            @auth
+            @auth('emp')
+                @dd(auth()->user())
+                @if(auth()->user()->tipo_usuario == 'empresa')
+                    <li><a href="{{route('empresas.edit', auth()->user()->id)}}" class="links">Meus dados</a></li>
+                @endif
+
+                @if(auth()->user()->tipo_usuario == 'usuario')
+                    <li><a href="{{route('usuarios.edit', auth()->user()->id)}}" class="links">Meus dados</a></li>
+                @endif
+                
                 <li><a href="{{route('login.destroy')}}" class="links">Sair</a></li>
             @endauth
             @guest

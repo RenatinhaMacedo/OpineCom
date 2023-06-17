@@ -39,4 +39,9 @@ class Usuario extends Authenticatable
     {
         return $this->administrador == true;
     }
+
+    public function getTipoUsuarioAttribute()
+    {
+        return 'usuario';
+    }
 }

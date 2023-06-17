@@ -188,11 +188,12 @@
             <div class="avaliacoes">
                 <div class="row-avaliacoes" data-aos="fade-right">
                     <div class="cards-avaliacoes">
-                        <h4 class="title-card-avaliacoes">Nome: {{ $opiniao->usuario->nome }}</h4>
+                    <img src="/storage/{{ $opiniao->imagem }}" class="img-fluid">
+                        <h4 class="title-card-avaliacoes my-5">Nome: {{ $opiniao->usuario->nome }}</h4>
                         <p class="text-card-avaliacoes">Título: {{ $opiniao->titulo }}</p>
                         <p class="text-card-avaliacoes">Avaliação: {{ $opiniao->avaliacao }}</p>
                         <p class="text-card-avaliacoes">Data: {{ $opiniao->data }}</p>
-                        <p class="text-card-avaliacoes">Empresa:</p>
+                        <p class="text-card-avaliacoes">Empresa:{{ $opiniao->empresa_id }}</p>
                     </div>
                     <br>
         @endforeach

@@ -40,6 +40,15 @@ nav {
     position: relative;
 }
 
+.display-2{
+    font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        text-shadow: #6f67ff 0.1em 0.0em;
+        font-size: 75px;
+    
+
+}
+
 .img-logo {
     margin-right: 17.5rem;
     text-decoration: none;
@@ -145,6 +154,7 @@ li {
     margin: 0px 0px 42px;
 }
 
+
 :is(.h1-main, .p-main) {
     color: #FFFFFF;
 }
@@ -194,7 +204,7 @@ li {
     align-items: center;
     flex-direction: column;
     margin: 40px 0px 0px 0px;
-    background-color: #FFFFFF;
+    background-color: #fFFFFF;
     width: 350px;
     height: 274px;
     margin: 0px 0px 30px;
@@ -222,6 +232,15 @@ li {
 
 .img-verificado{
     height: 30px;
+}
+
+.img-fluid{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    border-radius: 50%; 
+    border: 5px solid #FFA500;
 }
 
 .title-card {
@@ -397,7 +416,7 @@ li {
     flex-direction: column;
     background-color: #FFFFFF;
     width: 380px;
-    height: 310px;
+    height: 360px;
     margin: 0px 0px 30px;
     padding: 20px;
     border-radius: 10px;
@@ -855,7 +874,7 @@ footer {
     }
 }
 //ESTILIZAÇÃO LISTA-EMPRESAS
-     h2{
+    h2{
         font-family: Arial, Helvetica, sans-serif;
         font-weight: bold;
     }

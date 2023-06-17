@@ -53,7 +53,7 @@ Route::middleware(['auth:usr,emp'])->group(function () {
     //Rotas Usuarios
     Route::get('/usuarios', [UsuariosController::class, 'index'])->name('usuarios.index');
     Route::get('/usuarios/{usuario}', [UsuariosController::class, 'show'])->name('usuarios.show');
-    Route::get('/usuarios/editar/{usuario}', [UsuariosController::class, 'edit'])->name('usuarios.edit');
+    Route::get('/usuarios/{usuario}/editar', [UsuariosController::class, 'edit'])->name('usuarios.edit');
 
     Route::put('/usuarios/{usuario}', [UsuariosController::class, 'update'])->name('usuarios.update');
     Route::get('/usuarios/{usuario}/destroy', [UsuariosController::class, 'destroy'])->name('usuarios.destroy');
